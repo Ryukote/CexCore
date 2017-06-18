@@ -147,18 +147,21 @@ namespace CEXIO.Api.Common
                     "Permission denied"
                 };
 
-            var error = errorObj["error"].ToString();
+            var error = errorObj["error"];
 
-            switch (error)
+            if (error == null)
+                return;
+
+            switch (error.ToString())
             {
                 case "Invalid API key":
-                    throw new InvalidApiKeyException(response, error);
+                    throw new InvalidApiKeyException(response, error.ToString());
 
                 case "Nonce must be incremented":
-                    throw new NonceException(response, error);
+                    throw new NonceException(response, error.ToString());
 
                 case "Permission denied":
-                    throw new PermissionDeniedException(response, error);
+                    throw new PermissionDeniedException(response, error.ToString());
             }
 
         }
