@@ -11,17 +11,16 @@ namespace CEXIO.Api.Helpers
         private static long _nonce;
         private static readonly object LockObj = new object();
 
-
         static Nonce()
         {
             lock (LockObj)
             {
-
                 var nonceString = DateTime.UtcNow.Subtract(Timestamp.EpochStart)
                     .TotalSeconds
-                    .ToString(CultureInfo.InvariantCulture);
+                    .ToString(CultureInfo.InvariantCulture)
+                    .Split('.')[0];
 
-                _nonce = long.Parse(nonceString);
+                _nonce = Convert.ToInt32(nonceString);
             }
         }
 
