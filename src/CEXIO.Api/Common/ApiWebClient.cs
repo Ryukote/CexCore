@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CEXIO.Api.Common
 {
-    sealed class ApiWebClient
+    public sealed class ApiWebClient
     {
         private string _baseUrl = "https://cex.io/api/";
         public string BaseUrl
