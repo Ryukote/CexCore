@@ -15,7 +15,7 @@
     {
         BTC_USD,
         BTC_EUR,
-        BTC,GBP,
+        BTC_GBP,
         BTC_RUB,
         ETH_BTC,
         ETH_USD,

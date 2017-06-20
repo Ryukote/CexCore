@@ -3,34 +3,31 @@ using Newtonsoft.Json;
 
 namespace CEXIO.Api.MarketEntities
 {
-    public class Ticker
+    public class Ticker : EntityBase
     {
         [JsonProperty("timestamp")]
-        public Timestamp Timestamp { get; internal set; }
+        public Timestamp Timestamp { get; private set; }
 
         [JsonProperty("ask")]
-        public decimal Ask { get; internal set; }
+        public decimal Ask { get; private set; }
 
         [JsonProperty("bid")]
-        public decimal Bid { get; internal set; }
+        public decimal Bid { get; private set; }
 
         [JsonProperty("high")]
-        public decimal High { get; internal set; }
+        public decimal High { get; private set; }
 
         [JsonProperty("low")]
-        public decimal Low { get; internal set; }
+        public decimal Low { get; private set; }
 
         [JsonProperty("last")]
-        public decimal Last { get; internal set; }
-
+        public decimal Last { get; private set; }
 
         [JsonProperty("volume")]
-        public decimal Volume24H { get; internal set; }
+        public decimal Volume24H { get; private set; }
 
         [JsonProperty("volume30d")]
-        public decimal Volume30d { get; internal set; }
-
-        // TODO: Symbol Pair must be add.
+        public decimal Volume30d { get; private set; }
 
     }
 }
