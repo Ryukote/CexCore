@@ -4,7 +4,7 @@ using System.Net.Http;
 
 namespace CEXIO.Api.Exceptions
 {
-    public abstract class ApiException : Exception
+    public class ApiException : Exception
     {
         public HttpMethod RequestMethod { get; private set; }
         public Uri RequestUri { get; private set; }
