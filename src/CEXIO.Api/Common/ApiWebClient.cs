@@ -50,8 +50,25 @@ namespace CEXIO.Api.Common
         {
             var relativeUrl     = CreateRelativeUrl(command);
             var result          = await GetFromServiceAsync<TEntity>(relativeUrl, cancellationToken);
-
+            
             return result;
+        }
+
+        public async Task<JObject> GetDataAsync(string command, CancellationToken? cancellationToken = null)
+        {
+            var relativeUrl = CreateRelativeUrl(command);
+
+            using (var client = CreateHttpClient())
+            using (var response = await (cancellationToken.HasValue ? client.GetAsync(relativeUrl, cancellationToken.Value) : client.GetAsync(command)))
+            {
+                var json = await response.Content.ReadAsStringAsync();
+
+                var result = JObject.Parse(json);
+
+                ThrowIfError(response, result);
+
+                return result;
+            }
         }
 
         public async Task<TEntity> PostDataAsync<TEntity>(string command, Dictionary<string, string> paramFact, CancellationToken? cancellationToken = null)
@@ -63,16 +80,64 @@ namespace CEXIO.Api.Common
             return result;
         }
 
-        private string CreateRelativeUrl(string command)
+        public async Task<string> PostDataAsync(string command, Dictionary<string, string> paramFact, CancellationToken? cancellationToken = null)
         {
-            if (!command.EndsWith("/"))
-                command += "/";
+            long nonce;
+            var relativeUrl = CreateRelativeUrl(command);
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
 
-            string relativeUrl = string.Empty;
+            try
+            {
+                var signature = Credentials.GenerateSignature(out nonce);
 
-            relativeUrl += BaseUrl + string.Join("/", command);
+                var authParams = new Dictionary<string, string>()
+                {
+                    { "key", Credentials.ApiKey },
+                    { "signature", signature },
+                    { "nonce", nonce.ToString() }
+                };
 
-            return relativeUrl;
+                parameters = parameters.Concat(authParams).ToDictionary(x => x.Key, x => x.Value);
+            }
+            catch (NullReferenceException)
+            {
+
+            }
+
+            if (paramFact != null)
+                parameters = parameters.Concat(paramFact).ToDictionary(x => x.Key, x => x.Value);
+
+            var content = new StringContent(JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json");
+
+            using (var client = CreateHttpClient())
+            using (var response = await (cancellationToken.HasValue ? client.PostAsync(relativeUrl, content, cancellationToken.Value) : client.PostAsync(relativeUrl, content)))
+            {
+                var json = await response.Content.ReadAsStringAsync();
+
+                if (json == "true")
+                    return json;
+
+                JObject errorObj = null;
+
+                try
+                {
+                    errorObj = JObject.Parse(json);
+                }
+                catch (JsonReaderException ex)
+                {
+                    string error = "Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path '', line 1, position 1.";
+
+                    if (ex.Message == error)
+                        return json;
+
+                    throw;
+                }
+
+                ThrowIfError(response, errorObj);
+
+                
+                return json;
+            }
         }
 
         private async Task<TEntity> GetFromServiceAsync<TEntity>(string command, CancellationToken? cancellationToken = null)
@@ -96,9 +161,9 @@ namespace CEXIO.Api.Common
 
             var parameters = new Dictionary<string, string>()
             {
-                    { "key", Credentials.ApiKey },
-                    { "signature", signature },
-                    { "nonce", nonce.ToString() }
+                { "key", Credentials.ApiKey },
+                { "signature", signature },
+                { "nonce", nonce.ToString() }
             };
 
             if (paramFact != null)
@@ -128,6 +193,7 @@ namespace CEXIO.Api.Common
             });
 
             client.MaxResponseContentBufferSize = Int32.MaxValue;
+            client.BaseAddress = new Uri(BaseUrl);
 
             if (timeOut != null)
                 client.Timeout = timeOut.Value;
@@ -138,13 +204,26 @@ namespace CEXIO.Api.Common
             return client;
         }
 
+        private string CreateRelativeUrl(string command)
+        {
+            if (!command.EndsWith("/") && !command.Contains('?'))
+                command += "/";
+
+            string relativeUrl = string.Empty;
+
+            relativeUrl += BaseUrl + string.Join("/", command);
+
+            return relativeUrl;
+        }
+
         private static void ThrowIfError(HttpResponseMessage response, JObject errorObj)
         {
             string[] knownErrors =
                 {
                     "Invalid API key",
+                    "API key is missing.",
                     "Nonce must be incremented",
-                    "Permission denied"
+                    "Permission denied",
                 };
 
             var error = errorObj["error"];
@@ -157,11 +236,17 @@ namespace CEXIO.Api.Common
                 case "Invalid API key":
                     throw new InvalidApiKeyException(response, error.ToString());
 
+                case "API key is missing.":
+                    throw new ApiKeyIsMissingException(response, error.ToString());
+
                 case "Nonce must be incremented":
                     throw new NonceException(response, error.ToString());
 
                 case "Permission denied":
                     throw new PermissionDeniedException(response, error.ToString());
+
+                default:
+                    throw new ApiException(response, error.ToString());
             }
 
         }
