@@ -8,7 +8,13 @@
         ETH,
         RUB,
         GBP,
-        GHS
+        GHS,
+        BCH,
+        DASH,
+        XRP,
+        ZEC,
+        BTG,
+        XLM
     }
 
     public enum SymbolPairs
@@ -20,6 +26,27 @@
         ETH_BTC,
         ETH_USD,
         ETH_EUR,
-        GHS_BTC
+        GHS_BTC,
+        BCH_USD,
+        BCH_EUR,
+        BCH_GBP,
+        BCH_BTC,
+        DASH_USD,
+        DASH_EUR,
+        DASH_GBP,
+        DASH_BTC,
+        XRP_USD,
+        XRP_EUR,
+        XRP_BTC,
+        XLM_USD,
+        XLM_EUR,
+        XLM_BTC,
+        ZEC_USD,
+        ZEC_EUR,
+        ZEC_GBP,
+        ZEC_BTC,
+        BTG_USD,
+        BTG_EUR,
+        BTG_BTC
     }
 }

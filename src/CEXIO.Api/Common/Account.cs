@@ -143,7 +143,7 @@ namespace CEXIO.Api.Common
             {
                 { "type", order.Type.ToStringNormalized() },
                 { "amount", order.Amount.ToString(CultureInfo.InvariantCulture) },
-                { "order_tyope", "market" }
+                { "order_type", "market" }
             };
 
             var command = Command.PlaceOrder.ToStringNormalized() + order.Pair.ToStringNormalized();
