@@ -2,7 +2,8 @@
 ## .NET Wrapper for *[CEX.IO](https://cex.io/)*
 
 ### Getting started
-
+This is completed version of original repository by fasetto.
+In this fork, I have filled the gap created by original author with adding all crypto currencies available on CEX.IO and fixed a small bug for placing market order.
 ## SetUp
 
 ```csharp
@@ -59,4 +60,4 @@ var positionId = await client.Account.OpenPosition(position);
 If you're feeling generous, you can donate </br>
 [![Bitcoin Donate Button](https://www.drupal.org/files/project-images/bitcoindonate.png)][btc-addr]
 
-[btc-addr]: <https://blockchain.info/address/3NW9LnnYmk5icRNe6j9nVPKCXoQsCnKSPP>
+[btc-addr]: <https://blockchain.info/address/322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6>
