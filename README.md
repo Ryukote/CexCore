@@ -82,8 +82,8 @@ var positionId = await client.Account.OpenPosition(position);
 If you thin this project is good and want to show your support for further development of this repository, you can donate any amount of BTC. If you don't feel with donating, you can be a contributor and help me that way.
  
 <div style="text-align:center">
-    <h3>
+    <a href="https://blockchain.info/address/322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6">
 
-    Bitcoin address: https://blockchain.info/address/322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6
+    Click to see my BTC address 
     
 </div>
