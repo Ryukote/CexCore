@@ -55,7 +55,7 @@ var order = new Order(SymbolPairs.BTC_USD, null, 0.01m, OrderType.Buy);
 Order result = await client.Account.PlaceMarketOrder(order);
 ```
 
-### Margin trading
+## Margin trading
 
 Margin trading means borrowing money for trading which is very risky stuff. Please do margin trading with bigger knowledge about margin trading.
 
