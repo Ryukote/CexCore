@@ -1,5 +1,5 @@
 
-## .NET Wrapper for *[CEX.IO](https://cex.io/)*
+## .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
 
 ### Getting started
 This is completed version of original repository by fasetto.
