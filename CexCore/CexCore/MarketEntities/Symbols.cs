@@ -14,7 +14,10 @@
         XRP,
         ZEC,
         BTG,
-        XLM
+        XLM,
+        QASH,
+        GUSD,
+        OMG
     }
 
     public enum SymbolPairs
@@ -47,6 +50,13 @@
         ZEC_BTC,
         BTG_USD,
         BTG_EUR,
-        BTG_BTC
+        BTG_BTC,
+        QASH_BTC,
+        QASH_ETH,
+        GUSD_USD,
+        GUSD_EUR,
+        OMG_USD,
+        OMG_EUR,
+        OMG_BTC
     }
 }
