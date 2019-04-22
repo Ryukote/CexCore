@@ -5,8 +5,8 @@
     <Authors>Ryukote</Authors>
     <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
     <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
-    <Version>1.2.0</Version>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <Version>1.2.1</Version>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
