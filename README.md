@@ -1,6 +1,6 @@
 ## INFO!
 
-On June 6, 2019, the QASH/BTC and QASH/ETH pairs will be delisted from CEX.IO.
+On June 6, 2019, the **QASH/BTC** and **QASH/ETH** pairs will be delisted from CEX.IO.
 More information on [CEX.IO blog](https://blog.cex.io/news/qash-delist-18867)
 
 ## .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
