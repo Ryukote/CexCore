@@ -17,7 +17,8 @@
         XLM,
         QASH,
         GUSD,
-        OMG
+        OMG,
+        MHC
     }
 
     public enum SymbolPairs
@@ -57,6 +58,8 @@
         GUSD_EUR,
         OMG_USD,
         OMG_EUR,
-        OMG_BTC
+        OMG_BTC,
+        MHC_BTC,
+        MHC_ETH
     }
 }
