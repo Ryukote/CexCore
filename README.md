@@ -1,3 +1,7 @@
+## INFO!
+
+On June 6, 2019, the **QASH/BTC** and **QASH/ETH** pairs will be delisted from CEX.IO.
+More information on [CEX.IO blog](https://blog.cex.io/news/qash-delist-18867)
 
 ## .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
 
@@ -81,9 +85,10 @@ var positionId = await client.Account.OpenPosition(position);
 
 If you thin this project is good and want to show your support for further development of this repository, you can donate any amount of BTC. If you don't feel with donating, you can be a contributor and help me that way.
 
-<div style="text-align:center">
-    <a href="https://blockchain.info/address/322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6">
-
+<div>
+   <img src="https://blockchain.info/qr?data=322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6&size=200" alt=""/>
+   <br/>
+   <a href="https://blockchain.info/address/322SRqTS3EeKGaVFuo6xsw8e5Xji4QcJR6">
     Click to see my BTC address
-    
+   </a>
 </div>
