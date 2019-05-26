@@ -5,9 +5,12 @@
     <Authors>Ryukote</Authors>
     <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
     <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
-    <Version>1.2.1</Version>
+    <Version>1.3.1</Version>
     <AssemblyVersion>1.3.1.0</AssemblyVersion>
     <FileVersion>1.3.1.0</FileVersion>
+    <PackageReleaseNotes>I have added support for MHC currency in this version..
+MHC currency is linked to BTC and ETH..
+For those changes check CexCore.MarketEntities.Symbols and CexCore.MarketEntities.SymbolPairs enumerations.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
