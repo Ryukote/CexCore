@@ -15,7 +15,6 @@
         ZEC,
         BTG,
         XLM,
-        QASH,
         GUSD,
         OMG,
         MHC
@@ -52,14 +51,15 @@
         BTG_USD,
         BTG_EUR,
         BTG_BTC,
-        QASH_BTC,
-        QASH_ETH,
         GUSD_USD,
         GUSD_EUR,
         OMG_USD,
         OMG_EUR,
         OMG_BTC,
         MHC_BTC,
-        MHC_ETH
+        MHC_ETH,
+        MHC_USD,
+        MHC_EUR,
+        MHC_GBP
     }
 }
