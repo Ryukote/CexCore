@@ -1,16 +1,15 @@
-## INFO!
+# .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
 
-On June 6, 2019, the **QASH/BTC** and **QASH/ETH** pairs will be delisted from CEX.IO.
-More information on [CEX.IO blog](https://blog.cex.io/news/qash-delist-18867)
-
-## .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
-
-### Getting started
-This is completed version of original repository by fasetto.
-In this fork, I have filled the gap created by original author with adding all crypto currencies available on CEX.IO and fixed a small bug for placing market order.
 ## Getting started
 
+This is completed version of original repository by fasetto.
+In this fork, I have filled the gap created by original author with adding all crypto currencies available on CEX.IO and fixed a small bug for placing market order.
+
+## Getting started (code)
+
 1) For both public and private REST methods:
+
+**In order to make any call, you NEED to provide valid User Id, Api Key and Api Secret**
 
 ```csharp
 private ApiCredentials credentials = new ApiCredentials("userId","apiKey","apiSecret");

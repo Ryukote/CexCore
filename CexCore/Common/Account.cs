@@ -22,7 +22,10 @@ namespace CexCore.Common
         {
             var parameters = new Dictionary<string, string>()
             {
-                { "id", orderId.ToString() }
+                {
+                    "id",
+                    orderId.ToString()
+                }
             };
 
             var command = Command.CancelOrder.ToString().Normalize();
@@ -139,16 +142,6 @@ namespace CexCore.Common
 
         public async Task<Order> PlaceMarketOrder(Order order, CancellationToken? cancellationToken = default(CancellationToken?))
         {
-            //char[] delimiter = { '_' };
-            //string[] splitPairs = pair.ToString().Split(delimiter);
-            ////https://cex.io/api/last_price/{symbol1}/{symbol2}
-            //var url = "last_price/" + splitPairs[0] + "/" + splitPairs[1];
-            ////Command.GetLastPrice.ToString() + pair.ToString()
-            //var command = url;
-            //var json = await _client.GetDataAsync(command);
-            //decimal price = json.Value<decimal>("lprice");
-
-            //return price;
             var parameters = new Dictionary<string, string>()
             {
                 { "type", order.Type.ToString().Normalize() },

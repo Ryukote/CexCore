@@ -67,7 +67,7 @@ namespace CexCore.Helpers
                     return "close_position/";
                 case Command.Convert:
                     return "convert/";
-                case Command.GetOrderBook:
+                case Command.Order_Book:
                     return "order_book/";
                 case Command.GetTradeHistory:
                     return "trade_history/";

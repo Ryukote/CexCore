@@ -5,11 +5,10 @@
     <Authors>Ryukote</Authors>
     <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
     <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
-    <Version>1.4.1</Version>
-    <AssemblyVersion>1.4.1.0</AssemblyVersion>
-    <FileVersion>1.4.1.0</FileVersion>
-    <PackageReleaseNotes>I have added support for MHC_USD, MHC_EUR and MHC_GBP.
-Since cex.io announced removal of QASH for June 6, I have removed support for QASH.</PackageReleaseNotes>
+    <Version>1.6.2</Version>
+    <AssemblyVersion>1.6.2.0</AssemblyVersion>
+    <FileVersion>1.6.2.0</FileVersion>
+    <PackageReleaseNotes>Fixed order book.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

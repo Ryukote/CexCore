@@ -15,7 +15,7 @@
         GetOpenPositions,
         ClosePosition,
         Convert,
-        GetOrderBook,
+        Order_Book,
         GetTradeHistory
     }
 }

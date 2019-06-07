@@ -86,10 +86,11 @@ namespace CexCore
             return converted;
         }
 
-        public Task<OrderBook> GetOrderBookAsync(SymbolPairs pair, int depth, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<OrderBook> GetOrderBookAsync(SymbolPairs pair)
         {
-            var command = Command.GetOrderBook.ToString().Normalize() + SymbolPairs.BTC_USD.ToString().Normalize() + "/?depth=" + depth;
-            var orderbook = _client.GetDataAsync<OrderBook>(command);
+            string[] splittedPairs = pair.ToString().Split('_');
+            var command = Command.Order_Book.ToString().ToLowerInvariant() + "/" + splittedPairs[0] + "/" + splittedPairs[1];
+            var orderbook = await _client.GetDataAsync<OrderBook>(command);
 
             return orderbook;
         }
