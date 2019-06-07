@@ -32,6 +32,14 @@ Balance balance = await client.Account.GetBalanceAsync();
 decimal btcBalance = balance.BTC.Available;
 ```
 
+## Order book
+
+To get all information on order book you need to write:
+
+```csharp
+var orderBook = await client.GetOrderBookAsync(SymbolPairs.XRP_USD);
+```
+
 ## Last price
 
 To get the last price for Bitcoin or some Altcoin use GetLastPriceAsync method and give it SymbolPairs enum as argument:
