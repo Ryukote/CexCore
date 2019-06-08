@@ -1,5 +1,9 @@
 # .NET Core Wrapper for *[CEX.IO](https://cex.io/)*
 
+## Important
+
+I am currently refactoring entire project so it can take some time before new package version gets up on NuGet.
+
 ## Getting started
 
 This is completed version of original repository by fasetto.
