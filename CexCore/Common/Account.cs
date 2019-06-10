@@ -1,9 +1,14 @@
-﻿using CexCore.Helpers;
+﻿using CexCore.Data;
+using CexCore.Helpers;
 using CexCore.MarketEntities;
+using CexCore.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -18,31 +23,56 @@ namespace CexCore.Common
             _client = client;
         }
 
-        public async Task<bool> CancelOrder(ulong orderId, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<Tuple<HttpStatusCode, string>> CancelOrder(ulong orderId)
         {
-            var parameters = new Dictionary<string, string>()
+            string json = string.Empty;
+            var client = new CexHttpClient();
+
+            var cancelOrder = new CancelOrder()
             {
-                {
-                    "id",
-                    orderId.ToString()
-                }
+                Id = orderId
             };
 
-            var command = Command.CancelOrder.ToString().Normalize();
-            var result = await _client.PostDataAsync(command, parameters);
+            try
+            {
+                json = JsonConvert.SerializeObject(cancelOrder);
+            }
+            catch(JsonException ex)
+            {
+                throw new JsonException("Your JSON is not valid.", ex);
+            }
 
-            if (result == "true")
-                return true;
-
-            return false;
+            using (HttpContent content = new StringContent(json))
+            {
+                try
+                {
+                    return await client.CexPostAsync(CexConstants.CancelOrderUrl, content);
+                }
+                catch(HttpRequestException ex)
+                {
+                    throw new HttpRequestException(CexConstants.HttpPostRequestException, ex);
+                }
+            }
         }
 
-        public async Task<bool> CancelOrder(SymbolPairs pair, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<Tuple<HttpStatusCode, string>> CancelOrder(SymbolPairs pair)
         {
-            var command = Command.CancelAll.ToString().Normalize() + pair.ToString().Normalize();
-            await _client.PostDataAsync(command, null);
+            var client = new CexHttpClient();
 
-            return true;
+            var splittedPair    s = pair.ToString().Split('_');
+
+            var cancelOrder = new CancelOrdersForGivenPair()
+            {
+                FirstCurrency = splittedPairs[0],
+                SecondCurrency = splittedPairs[1]
+            };
+
+            var json = JsonConvert.SerializeObject(cancelOrder);
+
+            using (HttpContent content = new StringContent(json))
+            {
+                return await client.CexPostAsync(CexConstants.CancelOrderUrl, content);
+            }
         }
 
         public async Task<bool> ClosePosition(SymbolPairs pair, ulong positionId, CancellationToken? cancellationToken = default(CancellationToken?))

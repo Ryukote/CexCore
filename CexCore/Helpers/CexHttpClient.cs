@@ -16,11 +16,7 @@ namespace CexCore.Helpers
 
         public CexHttpClient()
         {
-            _exceptionBuiler.Append("Something went wrong. ");
-            _exceptionBuiler.Append("If you think this exception is not caused by you ");
-            _exceptionBuiler.Append("open a new issue on https://github.com/Ryukote/CexCore ");
-            _exceptionBuiler.Append("with given exception message and stack trace, and describe ");
-            _exceptionBuiler.Append("step by step how to get to the exception.");
+            
         }
 
         /// <summary>
