@@ -1,4 +1,4 @@
-﻿namespace CexCore.Data
+﻿namespace CexCore.Common
 {
     public static class CexExceptionMessages
     {
@@ -12,6 +12,14 @@
                 " Check if CEX.IO API is live on: https://status.cex.io" +
                 " or check if your url and body is valid.";
 
+        #endregion
+
+        #region Custom exceptions
+        public static string UserIdNotProvidedException = "User id is not provided.";
+
+        public static string ApiKeyNotProvidedException = "API key is not provided.";
+
+        public static string ApiSecretNotProvidedException = "API secret is not provided.";
         #endregion
     }
 }

@@ -1,10 +1,9 @@
-﻿using System;
+﻿using CexCore.Common;
+using CexCore.Contracts;
+using System;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using CexCore.Contracts;
-using CexCore.Data;
 
 namespace CexCore.Utilities
 {
@@ -49,16 +48,13 @@ namespace CexCore.Utilities
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    using (HttpContent content = new StringContent(await httpContent.ReadAsStringAsync()))
-                    {
-                        content.Headers.ContentType.MediaType = "application/json";
+                    httpContent.Headers.ContentType.MediaType = "application/json";
 
-                        var response = await client.PostAsync(url, httpContent);
+                    var response = await client.PostAsync(url, httpContent);
 
-                        var responseContent = await response.Content.ReadAsStringAsync();
+                    var responseContent = await response.Content.ReadAsStringAsync();
 
-                        return new Tuple<HttpStatusCode, string>(response.StatusCode, responseContent);
-                    }
+                    return new Tuple<HttpStatusCode, string>(response.StatusCode, responseContent);
                 }
             }
             catch (HttpRequestException ex)
