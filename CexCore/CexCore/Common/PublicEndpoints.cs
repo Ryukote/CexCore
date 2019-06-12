@@ -10,5 +10,12 @@ namespace CexCore.Common
             $"https://cex.io/api/ticker/{cryptoCurrency.ToString()}/{fiat.ToString()}";
 
         internal static string TickersForAllPairsByMarkets = "https://cex.io/api/tickers";
+
+        internal static string LastPrice(string symbol1, string symbol2) =>
+            $"https://cex.io/api/last_price/{symbol1}/{symbol2}";
+
+        internal static string LastPricesForGivenMarkets = "https://cex.io/api/last_prices";
+
+        internal static string Converter(string symbol1, string symbol2) => $"https://cex.io/api/convert/{symbol1}/{symbol2}";
     }
 }

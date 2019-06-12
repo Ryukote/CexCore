@@ -23,6 +23,9 @@
 
         public static string CexCollectionException = "You provided either (one or multiple) empty collection(s)" +
             " or (one or multiple) null collection(s).";
+
+        public static string CexNullCurrenciesException = "Check currency1 and currency2." +
+            "You probably didn't enter valid values or valid pairs.";
         #endregion
     }
 }
