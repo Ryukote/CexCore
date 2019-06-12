@@ -9,7 +9,7 @@ namespace CexCore.Contracts
     /// <summary>
     /// Account endpoints contract
     /// </summary>
-    public interface IAccount
+    internal interface IAccount
     {
         Task<Tuple<HttpStatusCode, AccountBalanceResponse>> GetAccountBalance(AccountBalanceRequest balance);
     }

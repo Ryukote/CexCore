@@ -20,6 +20,9 @@
         public static string ApiKeyNotProvidedException = "API key is not provided.";
 
         public static string ApiSecretNotProvidedException = "API secret is not provided.";
+
+        public static string CexCollectionException = "You provided either (one or multiple) empty collection(s)" +
+            " or (one or multiple) null collection(s).";
         #endregion
     }
 }
