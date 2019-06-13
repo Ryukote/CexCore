@@ -1,9 +1,10 @@
-﻿using CexCore.Models.Common;
+﻿using CexCore.Contracts;
+using CexCore.Models.Common;
 using Newtonsoft.Json;
 
 namespace CexCore.Models.Response
 {
-    public class AccountBalanceResponse
+    public class AccountBalanceResponse : IResponse
     {
         /// <summary>
         /// UNIX timestamp.

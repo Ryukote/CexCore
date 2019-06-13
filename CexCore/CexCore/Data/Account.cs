@@ -30,7 +30,7 @@ namespace CexCore.Data
             using(HttpContent content = new StringContent(json))
             {
                 var response = await _client.PostAsync(AccountEndpoints.AccountBalance, content);
-                return ResponseConverter.ConvertBalanceResponse(response);
+                return ResponseConverter<AccountBalanceResponse>.ConvertResponse(response);
             }
         }
     }
