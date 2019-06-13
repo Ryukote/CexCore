@@ -1,7 +1,7 @@
 ﻿namespace CexCore.Common
 {
-    public static class AccountEndpoints
+    internal static class AccountEndpoints
     {
-        public static string AccountBalance = "https://cex.io/api/balance/";
+        internal static string AccountBalance = "https://cex.io/api/balance/";
     }
 }

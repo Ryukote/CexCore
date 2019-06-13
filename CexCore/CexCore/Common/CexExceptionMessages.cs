@@ -20,6 +20,15 @@
         public static string ApiKeyNotProvidedException = "API key is not provided.";
 
         public static string ApiSecretNotProvidedException = "API secret is not provided.";
+
+        public static string CexCollectionException = "You provided either (one or multiple) empty collection(s)" +
+            " or (one or multiple) null collection(s).";
+
+        public static string CexGeneralCollectionException = "You provided either empty collection" +
+            " or null collection.";
+
+        public static string CexNullCurrenciesException = "Check currency1 and currency2." +
+            "You probably didn't enter valid values or valid pairs.";
         #endregion
     }
 }

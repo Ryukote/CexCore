@@ -8,7 +8,7 @@ namespace CexCore.Contracts
     /// <summary>
     /// Interface for CexHttpClient
     /// </summary>
-    public interface ICexHttpClient
+    internal interface ICexHttpClient
     {
         Task<Tuple<HttpStatusCode, string>> GetAsync(string url);
         Task<Tuple<HttpStatusCode, string>> PostAsync(string url, HttpContent httpContent);
