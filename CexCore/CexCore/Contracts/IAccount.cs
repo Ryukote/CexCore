@@ -11,6 +11,8 @@ namespace CexCore.Contracts
     /// </summary>
     internal interface IAccount
     {
-        Task<Tuple<HttpStatusCode, AccountBalanceResponse>> GetAccountBalance(AccountBalanceRequest balance);
+        Task<Tuple<HttpStatusCode, AccountBalanceResponse>> GetAccountBalanceAsync(AccountBalanceRequest balance);
+
+        Task<Tuple<HttpStatusCode, OpenOrdersResponse>> GetOpenOrdersAsync(BaseRequest request);
     }
 }

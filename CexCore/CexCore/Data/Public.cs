@@ -120,7 +120,7 @@ namespace CexCore.Data
 
             var response = await _client.GetAsync(PublicEndpoints.TradeHistory(symbol1, symbol2, since));
 
-            var convertedHistory = TradeHistoryResponse.TradeHistoryList(response.Item2);
+            var convertedHistory = ResponseConverter<TradeHistory>.ConvertToArray(response.Item2);
 
             var tradeHistoryResponse = new TradeHistoryResponse()
             {
