@@ -17,5 +17,10 @@ namespace CexCore.Common
         internal static string LastPricesForGivenMarkets = "https://cex.io/api/last_prices";
 
         internal static string Converter(string symbol1, string symbol2) => $"https://cex.io/api/convert/{symbol1}/{symbol2}";
+
+        internal static string OrderBook = "https://cex.io/api/order_book";
+
+        internal static string TradeHistory(string symbol1, string symbol2, string since) =>
+            $"https://cex.io/api/trade_history/{symbol1}/{symbol2}/{since}";
     }
 }

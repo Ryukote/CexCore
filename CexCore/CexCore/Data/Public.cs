@@ -2,10 +2,13 @@
 using CexCore.Contracts;
 using CexCore.Exceptions;
 using CexCore.Models.Common;
+using CexCore.Models.Request;
 using CexCore.Models.Response;
 using CexCore.Utilities;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -32,7 +35,7 @@ namespace CexCore.Data
             Tuple<HttpStatusCode, string> response;
             var json = JsonConvert.SerializeObject(converter);
 
-            using(HttpContent content = new StringContent(json))
+            using (HttpContent content = new StringContent(json))
             {
                 content.Headers.ContentType.MediaType = "application/json";
                 response = await _client.PostAsync(PublicEndpoints.Converter(symbol1, symbol2), content);
@@ -60,7 +63,7 @@ namespace CexCore.Data
 
             var convertedResponse = ResponseConverter<LastPriceResponse>.ConvertResponse(response);
 
-            if(convertedResponse.Item2.LastPrice == null)
+            if (convertedResponse.Item2.LastPrice == null)
             {
                 throw new CexNullException(CexExceptionMessages.CexNullCurrenciesException);
             }
@@ -78,6 +81,21 @@ namespace CexCore.Data
             return ResponseConverter<LastPriceForGivenMarketsResponse>.ConvertResponse(response);
         }
 
+        public async Task<Tuple<HttpStatusCode, OrderBookResponse>> GetOrderBook(OrderBookRequest orderBook)
+        {
+            List<string> list = new List<string>();
+
+            list.Add(orderBook.Symbol1);
+            list.Add(orderBook.Symbol2);
+            list.Add(orderBook.Depth.ToString());
+
+            var afterUrl = AfterUrl.GetAfterUrlGeneral(list);
+
+            var response = await _client.GetAsync(PublicEndpoints.OrderBook + afterUrl);
+
+            return ResponseConverter<OrderBookResponse>.ConvertResponse(response);
+        }
+
         public async Task<Tuple<HttpStatusCode, TickerResponse>> GetTickerAsync(CryptoCurrency cryptoCurrency, Fiat fiat)
         {
             var response = await _client.GetAsync(PublicEndpoints.Ticker(cryptoCurrency, fiat));
@@ -92,6 +110,24 @@ namespace CexCore.Data
             var response = await _client.GetAsync(PublicEndpoints.TickersForAllPairsByMarkets + afterUrl);
 
             return ResponseConverter<TickersForPairsResponse>.ConvertResponse(response);
+        }
+
+        public async Task<Tuple<HttpStatusCode, TradeHistoryResponse>> GetTradeHistory(TradeHistoryRequest tradeHistory)
+        {
+            var symbol1 = tradeHistory.Symbol1;
+            var symbol2 = tradeHistory.Symbol2;
+            var since = tradeHistory.Since.ToString();
+
+            var response = await _client.GetAsync(PublicEndpoints.TradeHistory(symbol1, symbol2, since));
+
+            var convertedHistory = TradeHistoryResponse.TradeHistoryList(response.Item2);
+
+            var tradeHistoryResponse = new TradeHistoryResponse()
+            {
+                TradeHistory = convertedHistory
+            };
+
+            return new Tuple<HttpStatusCode, TradeHistoryResponse>(response.Item1, tradeHistoryResponse);
         }
     }
 }

@@ -30,7 +30,27 @@ namespace CexCore.Utilities
             {
                 foreach (var symbol in listOfFiat)
                 {
-                    afterUrl = "/" + symbol.ToString();
+                    afterUrl += "/" + symbol.ToString();
+                }
+            }
+
+            return afterUrl;
+        }
+
+        internal static string GetAfterUrlGeneral(ICollection<string> list)
+        {
+            string afterUrl = string.Empty;
+
+            if (list.Count.Equals(0) || list == null)
+            {
+                throw new CexCollectionException(CexExceptionMessages.CexGeneralCollectionException);
+            }
+
+            if (list != null && list.Count > 0)
+            {
+                foreach (var item in list)
+                {
+                    afterUrl += "/" + item.ToString();
                 }
             }
 

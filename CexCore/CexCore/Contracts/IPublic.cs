@@ -1,5 +1,6 @@
 ﻿using CexCore.Common;
 using CexCore.Models.Common;
+using CexCore.Models.Request;
 using CexCore.Models.Response;
 using System;
 using System.Collections.Generic;
@@ -25,5 +26,9 @@ namespace CexCore.Contracts
 
         Task<Tuple<HttpStatusCode, Converter>> GetConvertedAmount(string symbol1, string symbol2,
             Converter converter);
+
+        Task<Tuple<HttpStatusCode, OrderBookResponse>> GetOrderBook(OrderBookRequest orderBook);
+
+        Task<Tuple<HttpStatusCode, TradeHistoryResponse>> GetTradeHistory(TradeHistoryRequest tradeHistory);
     }
 }
