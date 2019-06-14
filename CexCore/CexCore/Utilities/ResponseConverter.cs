@@ -17,5 +17,7 @@ namespace CexCore.Utilities
 
             return new Tuple<HttpStatusCode, TResponse>(response.Item1, convertedResponse);
         }
+
+        internal static TResponse[] ConvertToArray(string json) => JsonConvert.DeserializeObject<TResponse[]>(json);
     }
 }
