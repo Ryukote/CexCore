@@ -22,5 +22,14 @@
         internal static string CryptoAddress = "https://cex.io/api/get_address/";
 
         internal static string GetMyFee = "https://cex.io/api/get_myfee/";
+
+        internal static string CancelReplaceOrder(string symbol1, string symbol2) =>
+            $"https://cex.io/api/cancel_replace_order/{symbol1}/{symbol2}";
+
+        internal static string OpenPosition(string symbol1, string symbol2) =>
+            $"https://cex.io/api/open_position/{symbol1}/{symbol2}";
+
+        internal static string ClosePosition(string symbol1, string symbol2) =>
+            $"https://cex.io/api/close_position/{symbol1}/{symbol2}";
     }
 }

@@ -155,5 +155,47 @@ namespace CexCore.Data
                 return new Tuple<HttpStatusCode, GetMyFeeResponse>(response.Item1, convertedResponse.Item2);
             }
         }
+
+        public async Task<Tuple<HttpStatusCode, CancelReplaceOrderResponse>> CancelReplaceOrderAsync(string symbol1, string symbol2, CancelReplaceOrderRequest request)
+        {
+            var json = JsonConvert.SerializeObject(request);
+
+            using (HttpContent content = new StringContent(json))
+            {
+                var response = await _client.PostAsync(AccountEndpoints.CancelReplaceOrder(symbol1, symbol2), content);
+
+                var convertedResponse = ResponseConverter<CancelReplaceOrderResponse>.ConvertResponse(response);
+
+                return new Tuple<HttpStatusCode, CancelReplaceOrderResponse>(response.Item1, convertedResponse.Item2);
+            }
+        }
+
+        public async Task<Tuple<HttpStatusCode, OpenPositionOrderResponse>> OpenPositionAsync(string symbol1, string symbol2, OpenPositionOrderRequest request)
+        {
+            var json = JsonConvert.SerializeObject(request);
+
+            using (HttpContent content = new StringContent(json))
+            {
+                var response = await _client.PostAsync(AccountEndpoints.OpenPosition(symbol1, symbol2), content);
+
+                var convertedResponse = ResponseConverter<OpenPositionOrderResponse>.ConvertResponse(response);
+
+                return new Tuple<HttpStatusCode, OpenPositionOrderResponse>(response.Item1, convertedResponse.Item2);
+            }
+        }
+
+        public async Task<Tuple<HttpStatusCode, ClosePositionResponse>> ClosePositionAsync(string symbol1, string symbol2, ClosePositionRequest request)
+        {
+            var json = JsonConvert.SerializeObject(request);
+
+            using (HttpContent content = new StringContent(json))
+            {
+                var response = await _client.PostAsync(AccountEndpoints.ClosePosition(symbol1, symbol2), content);
+
+                var convertedResponse = ResponseConverter<ClosePositionResponse>.ConvertResponse(response);
+
+                return new Tuple<HttpStatusCode, ClosePositionResponse>(response.Item1, convertedResponse.Item2);
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace CexCore.Models.Response
         public ulong Id { get; set; }
 
         [JsonProperty("sell_total")]
-        public string SellTotalS { get; set; }
+        public string SellTotal { get; set; }
 
         [JsonProperty("buy_total")]
         public string BuyTotal { get; set; }
