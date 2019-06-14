@@ -29,6 +29,13 @@ namespace CexCore.Data
             _client = new CexHttpClient();
         }
 
+        /// <summary>
+        /// Getting converted amount.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="converter">Instance of Converter.</param>
+        /// <returns>Tuple of HttpStatusCode and Converter.</returns>
         public async Task<Tuple<HttpStatusCode, Converter>> GetConvertedAmount(string symbol1, string symbol2,
             Converter converter)
         {
@@ -51,12 +58,22 @@ namespace CexCore.Data
             return convertedResponse;
         }
 
+        /// <summary>
+        /// Getting currency limits
+        /// </summary>
+        /// <returns>Tuple of HttpStatusCode and CurrencyLimitsResponse.</returns>
         public async Task<Tuple<HttpStatusCode, CurrencyLimitsResponse>> GetCurrencyLimitsAsync()
         {
             var response = await _client.GetAsync(PublicEndpoints.CurrencyLimits);
             return ResponseConverter<CurrencyLimitsResponse>.ConvertResponse(response);
         }
 
+        /// <summary>
+        /// Getting last price for given pair.
+        /// </summary>
+        /// <param name="currency1">Pair symbol 1.</param>
+        /// <param name="currency2">Pair symbol 2.</param>
+        /// <returns>Tuple of HttpStatusCode and LastPriceResponse.</returns>
         public async Task<Tuple<HttpStatusCode, LastPriceResponse>> GetLastPriceAsync(string currency1, string currency2)
         {
             var response = await _client.GetAsync(PublicEndpoints.LastPrice(currency1, currency2));
@@ -71,16 +88,27 @@ namespace CexCore.Data
             return convertedResponse;
         }
 
+        /// <summary>
+        /// Getting last prices for given markets.
+        /// </summary>
+        /// <param name="listOfCrypto">Collection of CryptoCurrency enum.</param>
+        /// <param name="listOfFiat">Collection of Fiat enum.</param>
+        /// <returns>Tuple of HttpStatusCode and LastPriceForGivenMarketsResponse.</returns>
         public async Task<Tuple<HttpStatusCode, LastPriceForGivenMarketsResponse>> GetLastPricesForGivenMarketsAsync
             (ICollection<CryptoCurrency> listOfCrypto, ICollection<Fiat> listOfFiat)
         {
-            var afterUrl = AfterUrl.GetAfterUrl(listOfCrypto, listOfFiat);
+            var urlSuffix = UrlSuffix.GetUrlSuffix(listOfCrypto, listOfFiat);
 
-            var response = await _client.GetAsync(PublicEndpoints.LastPricesForGivenMarkets + afterUrl);
+            var response = await _client.GetAsync(PublicEndpoints.LastPricesForGivenMarkets + urlSuffix);
 
             return ResponseConverter<LastPriceForGivenMarketsResponse>.ConvertResponse(response);
         }
 
+        /// <summary>
+        /// Getting order book.
+        /// </summary>
+        /// <param name="orderBook">Instance of OrderBookRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and OrderBookResponse.</returns>
         public async Task<Tuple<HttpStatusCode, OrderBookResponse>> GetOrderBook(OrderBookRequest orderBook)
         {
             List<string> list = new List<string>();
@@ -89,29 +117,46 @@ namespace CexCore.Data
             list.Add(orderBook.Symbol2);
             list.Add(orderBook.Depth.ToString());
 
-            var afterUrl = AfterUrl.GetAfterUrlGeneral(list);
+            var urlSuffix = UrlSuffix.GetGeneralUrlSuffix(list);
 
-            var response = await _client.GetAsync(PublicEndpoints.OrderBook + afterUrl);
+            var response = await _client.GetAsync(PublicEndpoints.OrderBook + urlSuffix);
 
             return ResponseConverter<OrderBookResponse>.ConvertResponse(response);
         }
 
+        /// <summary>
+        /// Getting ticker for given enum pairs.
+        /// </summary>
+        /// <param name="cryptoCurrency">CryptoCurrency enum.</param>
+        /// <param name="fiat">Fiat enum.</param>
+        /// <returns>Tuple of HttpStatusCode and TickerResponse.</returns>
         public async Task<Tuple<HttpStatusCode, TickerResponse>> GetTickerAsync(CryptoCurrency cryptoCurrency, Fiat fiat)
         {
             var response = await _client.GetAsync(PublicEndpoints.Ticker(cryptoCurrency, fiat));
             return ResponseConverter<TickerResponse>.ConvertResponse(response);
         }
 
+        /// <summary>
+        /// Getting tickers for pairs by market.
+        /// </summary>
+        /// <param name="listOfCrypto">Collection of CryptoCurrency enum.</param>
+        /// <param name="listOfFiat">Collection of Fiat enum.</param>
+        /// <returns>Tuple of HttpStatusCode and TickersForPairsResponse.</returns>
         public async Task<Tuple<HttpStatusCode, TickersForPairsResponse>> GetTickersForPairsByMarketAsync
             (ICollection<Symbols.CryptoCurrency> listOfCrypto, ICollection<Symbols.Fiat> listOfFiat)
         {
-            var afterUrl = AfterUrl.GetAfterUrl(listOfCrypto, listOfFiat);
+            var urlSuffix = UrlSuffix.GetUrlSuffix(listOfCrypto, listOfFiat);
 
-            var response = await _client.GetAsync(PublicEndpoints.TickersForAllPairsByMarkets + afterUrl);
+            var response = await _client.GetAsync(PublicEndpoints.TickersForAllPairsByMarkets + urlSuffix);
 
             return ResponseConverter<TickersForPairsResponse>.ConvertResponse(response);
         }
 
+        /// <summary>
+        /// Getting trade history.
+        /// </summary>
+        /// <param name="tradeHistory">Instance of TradeHistoryRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and TradeHistoryResponse.</returns>
         public async Task<Tuple<HttpStatusCode, TradeHistoryResponse>> GetTradeHistory(TradeHistoryRequest tradeHistory)
         {
             var symbol1 = tradeHistory.Symbol1;

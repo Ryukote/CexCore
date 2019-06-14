@@ -1,5 +1,8 @@
 ﻿namespace CexCore.Common
 {
+    /// <summary>
+    /// Custom exception messages for CEX.IO
+    /// </summary>
     public static class CexExceptionMessages
     {
         #region Http client exception messages

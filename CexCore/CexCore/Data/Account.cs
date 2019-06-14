@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using CexCore.Common;
 using CexCore.Contracts;
+using CexCore.Models.Common;
 using CexCore.Models.Request;
 using CexCore.Models.Response;
 using CexCore.Utilities;
@@ -23,6 +24,11 @@ namespace CexCore.Data
             _client = new CexHttpClient();
         }
 
+        /// <summary>
+        /// Getting account balance.
+        /// </summary>
+        /// <param name="balance">Instance of AccountBalanceRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and AccountBalanceResponse.</returns>
         public async Task<Tuple<HttpStatusCode, AccountBalanceResponse>> GetAccountBalanceAsync(AccountBalanceRequest balance)
         {
             var json = JsonConvert.SerializeObject(balance);
@@ -34,6 +40,11 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Getting open orders.
+        /// </summary>
+        /// <param name="request">Instance of BaseRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and OpenOrdersResponse.</returns>
         public async Task<Tuple<HttpStatusCode, OpenOrdersResponse>> GetOpenOrdersAsync(BaseRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -53,6 +64,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Getting open orders by pair.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of BaseRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and OpenOrdersResponse.</returns>
         public async Task<Tuple<HttpStatusCode, OpenOrdersResponse>> GetOpenOrdersByPairAşync(string symbol1, string symbol2, BaseRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -72,6 +90,11 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Getting active order status.
+        /// </summary>
+        /// <param name="request">Instance of ActiveOrderStatusRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and ActiveOrderStatusResponse.</returns>
         public async Task<Tuple<HttpStatusCode, ActiveOrderStatusResponse>> GetActiveOrderStatusAşync(ActiveOrderStatusRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -86,6 +109,11 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Cancel order method.
+        /// </summary>
+        /// <param name="request">Instance of CancelOrderRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and CancelOrderResponse.</returns>
         public async Task<Tuple<HttpStatusCode, CancelOrderResponse>> CancelOrderAşync(CancelOrderRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -100,6 +128,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Cancel order for given pair.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of BaseRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and CancelAllOrdersForGivenPairResponse.</returns>
         public async Task<Tuple<HttpStatusCode, CancelAllOrdersForGivenPairResponse>> CancelOrdersForGivenPairAşync(string symbol1, string symbol2, BaseRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -114,6 +149,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Place order.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of PlaceOrderRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and PlaceOrderResponse.</returns>
         public async Task<Tuple<HttpStatusCode, PlaceOrderResponse>> PlaceOrderAşync(string symbol1, string symbol2, PlaceOrderRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -128,6 +170,11 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Getting crypto address.
+        /// </summary>
+        /// <param name="addressRequest">Instance of CryptoAddressRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and CryptoAddressResponse.</returns>
         public async Task<Tuple<HttpStatusCode, CryptoAddressResponse>> GetCryptoAddressAşync(CryptoAddressRequest addressRequest)
         {
             var json = JsonConvert.SerializeObject(addressRequest);
@@ -142,6 +189,11 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Getting fee's for all pairs.
+        /// </summary>
+        /// <param name="request">Instance of BaseRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and GetMyFeeResponse.</returns>
         public async Task<Tuple<HttpStatusCode, GetMyFeeResponse>> GetMyFeeAşync(BaseRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -156,6 +208,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Cancel replace order.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of CancelReplaceOrderRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and CancelReplaceOrderResponse.</returns>
         public async Task<Tuple<HttpStatusCode, CancelReplaceOrderResponse>> CancelReplaceOrderAsync(string symbol1, string symbol2, CancelReplaceOrderRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -170,6 +229,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Open position for given pair.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of OpenPositionOrderRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and OpenPositionOrderResponse.</returns>
         public async Task<Tuple<HttpStatusCode, OpenPositionOrderResponse>> OpenPositionAsync(string symbol1, string symbol2, OpenPositionOrderRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
@@ -184,6 +250,13 @@ namespace CexCore.Data
             }
         }
 
+        /// <summary>
+        /// Close position for given pair.
+        /// </summary>
+        /// <param name="symbol1">Pair symbol 1.</param>
+        /// <param name="symbol2">Pair symbol 2.</param>
+        /// <param name="request">Instance of ClosePositionRequest.</param>
+        /// <returns>Tuple of HttpStatusCode and ClosePositionResponse.</returns>
         public async Task<Tuple<HttpStatusCode, ClosePositionResponse>> ClosePositionAsync(string symbol1, string symbol2, ClosePositionRequest request)
         {
             var json = JsonConvert.SerializeObject(request);

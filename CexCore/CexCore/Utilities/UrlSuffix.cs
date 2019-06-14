@@ -1,16 +1,14 @@
 ﻿using CexCore.Common;
 using CexCore.Exceptions;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CexCore.Utilities
 {
-    internal static class AfterUrl
+    internal static class UrlSuffix
     {
-        internal static string GetAfterUrl(ICollection<Symbols.CryptoCurrency> listOfCrypto, ICollection<Symbols.Fiat> listOfFiat)
+        internal static string GetUrlSuffix(ICollection<Symbols.CryptoCurrency> listOfCrypto, ICollection<Symbols.Fiat> listOfFiat)
         {
-            string afterUrl = string.Empty;
+            string urlSuffix = string.Empty;
 
             if ((listOfCrypto.Count.Equals(0) && listOfFiat.Count.Equals(0))
                 || (listOfCrypto == null && listOfFiat == null))
@@ -22,7 +20,7 @@ namespace CexCore.Utilities
             {
                 foreach (var symbol in listOfCrypto)
                 {
-                    afterUrl = "/" + symbol.ToString();
+                    urlSuffix = "/" + symbol.ToString();
                 }
             }
 
@@ -30,16 +28,16 @@ namespace CexCore.Utilities
             {
                 foreach (var symbol in listOfFiat)
                 {
-                    afterUrl += "/" + symbol.ToString();
+                    urlSuffix += "/" + symbol.ToString();
                 }
             }
 
-            return afterUrl;
+            return urlSuffix;
         }
 
-        internal static string GetAfterUrlGeneral(ICollection<string> list)
+        internal static string GetGeneralUrlSuffix(ICollection<string> list)
         {
-            string afterUrl = string.Empty;
+            string urlSuffix = string.Empty;
 
             if (list.Count.Equals(0) || list == null)
             {
@@ -50,11 +48,11 @@ namespace CexCore.Utilities
             {
                 foreach (var item in list)
                 {
-                    afterUrl += "/" + item.ToString();
+                    urlSuffix += "/" + item.ToString();
                 }
             }
 
-            return afterUrl;
+            return urlSuffix;
         }
     }
 }

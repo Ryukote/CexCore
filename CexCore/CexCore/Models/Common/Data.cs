@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
-namespace CexCore.Models.Response
+namespace CexCore.Models.Common
 {
     public class Data
     {

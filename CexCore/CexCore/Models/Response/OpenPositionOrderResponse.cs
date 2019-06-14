@@ -12,6 +12,6 @@ namespace CexCore.Models.Response
         public string Ok { get; set; }
 
         [JsonProperty("data")]
-        public OpenPositionOrderData OpenPositionOrderData { get; set; }
+        public Common.OpenPositionOrderData OpenPositionOrderData { get; set; }
     }
 }

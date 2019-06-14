@@ -1,7 +1,7 @@
 ﻿using CexCore.Contracts;
 using Newtonsoft.Json;
 
-namespace CexCore.Models.Response
+namespace CexCore.Models.Common
 {
     public class TradeHistory : IResponse
     {

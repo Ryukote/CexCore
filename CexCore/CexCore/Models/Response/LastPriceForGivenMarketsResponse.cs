@@ -12,6 +12,6 @@ namespace CexCore.Models.Response
         public string Ok { get; set; }
 
         [JsonProperty("data")]
-        public LastPriceData[] LastPriceData { get; set; }
+        public Common.LastPriceData[] LastPriceData { get; set; }
     }
 }

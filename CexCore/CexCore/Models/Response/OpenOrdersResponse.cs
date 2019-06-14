@@ -4,6 +4,6 @@ namespace CexCore.Models.Response
 {
     public class OpenOrdersResponse : IResponse
     {
-        public OpenOrders[] OpenOrders { get; set; }
+        public Common.OpenOrders[] OpenOrders { get; set; }
     }
 }

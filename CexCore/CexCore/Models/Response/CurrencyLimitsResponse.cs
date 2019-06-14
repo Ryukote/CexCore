@@ -12,6 +12,6 @@ namespace CexCore.Models.Response
         public string Ok { get; set; }
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public Common.Data Data { get; set; }
     }
 }

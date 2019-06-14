@@ -12,6 +12,6 @@ namespace CexCore.Models.Response
         public string Command { get; set; }
 
         [JsonProperty("data")]
-        public FeeData FeeData { get; set; }
+        public Common.FeeData FeeData { get; set; }
     }
 }

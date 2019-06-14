@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CexCore.Models.Response
+namespace CexCore.Models.Common
 {
     public class OrderBookAsks
     {
