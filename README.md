@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/ryukote/CexCore/_apis/build/status/Ryukote.CexCore%20(1)?branchName=master)](https://dev.azure.com/ryukote/CexCore/_build/latest?definitionId=2&branchName=master)
+
 # CexCore
 
 Welcome to **CexCore**, full wrapper over cex.io API.
