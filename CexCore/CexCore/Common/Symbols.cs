@@ -22,7 +22,8 @@
             OMG,
             MHC,
             GUSD,
-            USD
+            TRX,
+            BTT
         }
 
         /// <summary>
