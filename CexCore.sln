@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CexCore", "CexCore\CexCore.csproj", "{1A99FE78-400E-4D5E-B6A7-52DCD72D163A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CexCore", "CexCore\CexCore.csproj", "{1A99FE78-400E-4D5E-B6A7-52DCD72D163A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp4", "C:\Users\ryuko\source\repos\ConsoleApp4\ConsoleApp4\ConsoleApp4.csproj", "{C5C0F36E-797A-464D-B0E7-8179C25BDD42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1A99FE78-400E-4D5E-B6A7-52DCD72D163A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A99FE78-400E-4D5E-B6A7-52DCD72D163A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A99FE78-400E-4D5E-B6A7-52DCD72D163A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C0F36E-797A-464D-B0E7-8179C25BDD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C0F36E-797A-464D-B0E7-8179C25BDD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C0F36E-797A-464D-B0E7-8179C25BDD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C0F36E-797A-464D-B0E7-8179C25BDD42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

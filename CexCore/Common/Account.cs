@@ -1,9 +1,16 @@
-﻿using CexCore.Helpers;
+﻿using CexCore.Data;
+using CexCore.Helpers;
 using CexCore.MarketEntities;
+using CexCore.Models;
+using CexCore.Models.Request;
+using CexCore.Models.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,97 +18,180 @@ namespace CexCore.Common
 {
     public class Account : IAccount
     {
-        private readonly ApiWebClient _client;
+        private ApiCredentials _credentials;
+        private string _apiSecret;
 
-        public Account(ApiWebClient client)
+        public Account(ApiCredentials credentials, string apiSecret)
         {
-            _client = client;
+            _credentials = credentials;
+            _apiSecret = apiSecret;
         }
 
-        public async Task<bool> CancelOrder(ulong orderId, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<CancelOrderResponse> CancelOrder(CancelOrder cancelOrder)
         {
-            var parameters = new Dictionary<string, string>()
+            string json = string.Empty;
+
+            var client = new CexHttpClient();
+
+            try
             {
+                json = JsonConvert.SerializeObject(cancelOrder);
+            }
+            catch(JsonException ex)
+            {
+                throw new JsonException(CexConstants.InvalidJsonException, ex);
+            }
+
+            using (HttpContent content = new StringContent(json))
+            {
+                try
                 {
-                    "id",
-                    orderId.ToString()
+                    var responseObject = await client.CexPostAsync(CexConstants.CancelOrderUrl, content);
+
+                    return new CancelOrderResponse()
+                    {
+                        StatusCode = responseObject.Item1
+                    };
                 }
-            };
-
-            var command = Command.CancelOrder.ToString().Normalize();
-            var result = await _client.PostDataAsync(command, parameters);
-
-            if (result == "true")
-                return true;
-
-            return false;
+                catch(HttpRequestException ex)
+                {
+                    throw new HttpRequestException(CexConstants.HttpPostRequestException, ex);
+                }
+            }
         }
 
-        public async Task<bool> CancelOrder(SymbolPairs pair, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<CancelOrdersForGivenPairResponse> CancelOrdersForGivePair(SymbolPairs pair, EmptyPrivateRequest baseRequest)
         {
-            var command = Command.CancelAll.ToString().Normalize() + pair.ToString().Normalize();
-            await _client.PostDataAsync(command, null);
+            string json = string.Empty;
 
-            return true;
-        }
+            var client = new CexHttpClient();
 
-        public async Task<bool> ClosePosition(SymbolPairs pair, ulong positionId, CancellationToken? cancellationToken = default(CancellationToken?))
-        {
-            var parameters = new Dictionary<string, string>()
+            try
             {
-                { "id", positionId.ToString() }
-            };
-
-            var command = Command.ClosePosition.ToString().Normalize() + pair.ToString().Normalize();
-            await _client.PostDataAsync(command, parameters);
-
-            return true;
-        }
-
-        public async Task<string> GetAddressAsync(Symbols symbol, CancellationToken? cancellationToken = default(CancellationToken?))
-        {
-            var parameters = new Dictionary<string, string>()
+                json = JsonConvert.SerializeObject(baseRequest);
+            }
+            catch (JsonException ex)
             {
-                { "currency", Symbols.BTC.ToString() }
+                throw new JsonException(CexConstants.InvalidJsonException, ex);
+            }
+
+            var splittedPairs = pair.ToString().Split('_');
+
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(baseRequest)))
+            {
+                var responseObject = await client.CexPostAsync(CexConstants.CacelAllOrderWithPairsUrl(splittedPairs[0], splittedPairs[1]), content);
+
+                var response = JsonConvert.DeserializeObject<CancelOrdersForGivenPairResponse>(responseObject.Item2);
+                response.StatusCode = responseObject.Item1;
+
+                return response;
+            }
+        }
+
+        public async Task<ClosePositionResponse> ClosePosition(SymbolPairs pair, ulong positionId)
+        {
+            var client = new CexHttpClient();
+
+            var splittedPairs = pair.ToString().Split('_');
+
+            var positionRequest = new PositionRequest(_apiSecret)
+            {
+                Key = _credentials.ApiKey,
+                PositionId = positionId
             };
 
-            var command = Command.GetAddress.ToString().Normalize();
-            var json = await _client.PostDataAsync(command, parameters);
-            var addr = JObject.Parse(json).Value<string>("data");
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(positionRequest))))
+            {
+                var responseObject = await client.CexPostAsync(CexConstants.ClosePositionUrl(splittedPairs[0], splittedPairs[1]), content);
 
-            return addr;
+                var response = JsonConvert.DeserializeObject<ClosePositionResponse>(responseObject.Item2);
+                response.StatusCode = responseObject.Item1;
+
+                return response;
+            }
         }
 
-        public async Task<Balance> GetBalanceAsync()
+        public async Task<Tuple<HttpStatusCode, string>> GetAddressAsync(Symbols symbol)
         {
-            var balance = await _client.PostDataAsync<Balance>("balance", null);
-            return balance;
+            var client = new CexHttpClient();
+
+            var addressRequest = new AddressRequest(_hmac)
+            {
+                Key = _credentials.ApiKey,
+                Currency = symbol.ToString()
+            };
+
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(addressRequest))))
+            {
+                return await client.CexPostAsync(CexConstants.CryptoAddressUrl, content);
+            }
         }
 
-        public async Task<IEnumerable<Order>> GetOpenOrdersAsync(SymbolPairs pair, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<Tuple<HttpStatusCode, string>> GetBalanceAsync()
         {
-            var command = Command.GetOpenOrders.ToString().Normalize() + pair.ToString().Normalize();
-            var json = await _client.PostDataAsync(command, null);
+            var client = new CexHttpClient();
 
-            var orders = JsonConvert.DeserializeObject<IEnumerable<Order>>(json);
-            return orders;
+            var balanceRequest = new EmptyPrivateRequest(_hmac)
+            {
+                Key = _credentials.ApiKey
+            };
+
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(balanceRequest))))
+            {
+                return await client.CexPostAsync(CexConstants.BalanceUrl, content);
+            }
         }
 
-        public async Task<IEnumerable<Position>> GetOpenPositonsAsync(SymbolPairs pair, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<Tuple<HttpStatusCode, string>> GetOpenOrdersAsync()
         {
-            var command = Command.GetOpenPositions.ToString().Normalize() + pair.ToString().Normalize();
-            var json = await _client.PostDataAsync(command, null);
-            var jarr = JObject.Parse(json).Value<JArray>("data");
+            var client = new CexHttpClient();
 
-            IEnumerable<Position> positions = null;
+            var openOrders = new EmptyPrivateRequest(_hmac)
+            {
+                Key = _credentials.ApiKey
+            };
 
-            if (jarr.Count > 0)
-                positions = (IEnumerable<Position>)jarr;
-
-            return positions;
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(openOrders))))
+            {
+                return await client.CexPostAsync(CexConstants.OpenOrdersUrl, content);
+            }
         }
 
-        public async Task<long> OpenPosition(Position position, CancellationToken? cancellationToken = default(CancellationToken?))
+        public async Task<Tuple<HttpStatusCode, string>> GetOpenOrdersByPairAsync(SymbolPairs pair)
+        {
+            var client = new CexHttpClient();
+
+            var splittedPairs = pair.ToString().Split('_');
+
+            var openOrders = new EmptyPrivateRequest(_hmac)
+            {
+                Key = _credentials.ApiKey
+            };
+
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(openOrders))))
+            {
+                return await client.CexPostAsync(CexConstants.OpenOrdersByPairUrl(splittedPairs[0], splittedPairs[1]), content);
+            }
+        }
+
+        public async Task<Tuple<HttpStatusCode, string>> GetOpenPositonsAsync(SymbolPairs pair)
+        {
+            var client = new CexHttpClient();
+
+            var splittedPairs = pair.ToString().Split('_');
+
+            var openPosition = new OpenPositionOrderRequest(_hmac)
+            {
+                Key = _credentials.ApiKey
+            };
+
+            using (HttpContent content = new StringContent(JsonConvert.SerializeObject(JsonConvert.SerializeObject(openPosition))))
+            {
+                return await client.CexPostAsync(CexConstants.OpenPositionUrl(splittedPairs[0], splittedPairs[1]), content);
+            }
+        }
+
+        public async Task<Tuple<HttpStatusCode, string>> GetPosition(Position position)
         {
             var parameters = new Dictionary<string, string>()
             {
