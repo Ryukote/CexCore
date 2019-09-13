@@ -26,7 +26,6 @@ namespace CexCore.Common
             ApiKey = apiKey;
 
             _hmac = new HMACSHA256(Encoding.UTF8.GetBytes(apiSecret));
-
         }
 
         public string GenerateSignature(out long nonce)

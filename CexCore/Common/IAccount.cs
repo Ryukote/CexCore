@@ -18,6 +18,6 @@ namespace CexCore.Common
         Task<long> OpenPosition(Position position, CancellationToken? cancellationToken = null);
         Task<string> GetAddressAsync(Symbols symbol, CancellationToken? cancellationToken = null);
         Task<IEnumerable<Position>> GetOpenPositonsAsync(SymbolPairs pair, CancellationToken? cancellationToken = null);
-        Task<bool> ClosePosition(SymbolPairs pair, ulong positionId, CancellationToken? cancellationToken = null);
+        Task<Tuple<HttpStatusCode, string>> ClosePosition(SymbolPairs pair, ulong positionId);
     }
 }

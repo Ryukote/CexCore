@@ -18,6 +18,5 @@
   <ItemGroup>
     <Folder Include="Contracts\" />
     <Folder Include="Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

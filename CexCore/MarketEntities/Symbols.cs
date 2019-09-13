@@ -2,17 +2,17 @@
 {
     public enum Symbols
     {
-        BTC,
-        USD,
-        EUR,
-        ETH,
-        RUB,
-        GBP,
+        BTC, //+
+        USD, //+
+        EUR, //+
+        ETH, //+
+        RUB, //+
+        GBP, //+
         GHS,
-        BCH,
-        DASH,
+        BCH, //+
+        DASH, //+
         XRP,
-        ZEC,
+        ZEC, //+
         BTG,
         XLM,
         GUSD,
