@@ -18,12 +18,20 @@
             LTC,
             XRP,
             XLM,
-            ZEC,
             OMG,
             MHC,
             GUSD,
             TRX,
-            BTT
+            BTT,
+            ADA,
+            NEO,
+            GAS,
+            BAT,
+            ATOM,
+            XTZ,
+            ONT,
+            ONG,
+            USDC
         }
 
         /// <summary>
