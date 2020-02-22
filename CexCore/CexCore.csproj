@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Ryukote</Authors>
+    <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
+    <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
+    <Version>2.2.0</Version>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <FileVersion>2.2.0.0</FileVersion>
+    <PackageReleaseNotes>Added support for: ADA, NEO, GAS, BAT, ATOM, XTZ, ONT, ONG, USDC
+Removed support for: ZEC</PackageReleaseNotes>
+    <Copyright>Antonio Halužan (Ryukote)</Copyright>
+    <PackageTags>cex, cex.io, wrapper, crypto, cryptocurrency, trade, core, netcore, rest, api</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+</Project>
