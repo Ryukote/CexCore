@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Build CarBooking Web API
-        run: dotnet build --configuration Release
+      run: dotnet build --configuration Release
 
   tests:
     runs-on: ubuntu-latest
