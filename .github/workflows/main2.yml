@@ -32,7 +32,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Run CarBooking Web API Tests
-        run: dotnet test
+      run: dotnet test
   
   auto-approve:
     name: Auto approve pull request
