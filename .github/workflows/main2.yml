@@ -1,6 +1,3 @@
-uses: actions/checkout@v2
-name: CarBooking API Actions
-
 on:
   pull_request:
     branches:
