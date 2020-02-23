@@ -4,7 +4,7 @@ on:
     - master
 
 env:
-  IMAGE_NAME: carbookingapi
+  IMAGE_NAME: api
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Build CarBooking Web API
+    - name: Build API
       run: dotnet build --configuration Release
 
   tests:
@@ -29,7 +29,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Run CarBooking Web API Tests
+    - name: Run API Tests
       run: dotnet test
   
   auto-approve:
@@ -51,8 +51,7 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      name: Build the Docker image
+    - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
   docker-deploy:
