@@ -31,7 +31,8 @@
             XTZ,
             ONT,
             ONG,
-            USDC
+            USDC,
+            MATIC
         }
 
         /// <summary>
