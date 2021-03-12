@@ -21,6 +21,9 @@ namespace CexCore.Common
         internal static string Ticker(CryptoCurrency cryptoCurrency, Fiat fiat) =>
             $"https://cex.io/api/ticker/{cryptoCurrency.ToString()}/{fiat.ToString()}";
 
+        internal static string Ticker(CryptoCurrency cryptoCurrency1, CryptoCurrency cryptoCurrency2) =>
+            $"https://cex.io/api/ticker/{cryptoCurrency1.ToString()}/{cryptoCurrency2.ToString()}";
+
         internal static string LastPrice(string symbol1, string symbol2) =>
             $"https://cex.io/api/last_price/{symbol1}/{symbol2}";
 

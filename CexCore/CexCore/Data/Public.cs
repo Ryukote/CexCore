@@ -137,6 +137,18 @@ namespace CexCore.Data
         }
 
         /// <summary>
+        /// Getting ticker for given enum pairs.
+        /// </summary>
+        /// <param name="cryptoCurrency">CryptoCurrency enum.</param>
+        /// <param name="fiat">CryptoCurrency enum.</param>
+        /// <returns>Tuple of HttpStatusCode and TickerResponse.</returns>
+        public async Task<Tuple<HttpStatusCode, TickerResponse>> GetTickerAsync(CryptoCurrency cryptoCurrency1, CryptoCurrency cryptoCurrency2)
+        {
+            var response = await _client.GetAsync(PublicEndpoints.Ticker(cryptoCurrency1, cryptoCurrency2));
+            return ResponseConverter<TickerResponse>.ConvertResponse(response);
+        }
+
+        /// <summary>
         /// Getting tickers for pairs by market.
         /// </summary>
         /// <param name="listOfCrypto">Collection of CryptoCurrency enum.</param>
