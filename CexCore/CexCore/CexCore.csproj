@@ -2,19 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>2.3.0</Version>
+    <Version>3.0.0</Version>
     <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
     <Copyright>Antonio Halužan (Ryukote)</Copyright>
     <PackageProjectUrl>https://github.com/Ryukote/CexCore</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
-    <PackageReleaseNotes>Added support for: MATIC
+    <PackageReleaseNotes>Added support for crypto to crypto ticker and new currencies.
 Documentation on https://github.com/Ryukote/CexCore</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>cex cexio wrapper crypto cryptocurrency trade core netcore rest api</PackageTags>
     <Company>Ryukote</Company>
-    <AssemblyVersion>2.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <FileVersion>2.3.0.0</FileVersion>
+    <FileVersion>3.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
