@@ -1,4 +1,8 @@
 name: 'tag-version'
+on:
+  push:
+    branches:
+    - master
 description: 'Provides automated versioning of your commits using git tags each time your CI/CD workflow runs.'
 branding:
   icon: 'tag'
