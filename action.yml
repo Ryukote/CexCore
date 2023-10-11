@@ -1,0 +1,3 @@
+- name: tag-version
+  uses: juliansangillo/tag-version@v1.5
+            
