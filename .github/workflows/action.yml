@@ -1,28 +1,17 @@
-name: 'tag-version'
+name: 'tag'
 on:
   push:
     branches:
-    - master
-  workflow_dispatch:
-    inputs:
-      production-branch:
-        description: 'The branch to use for stable releases in production. Default is master'
-        required: false
-        default: master
-      dev-branch:
-        description: 'The branch to use for dev deployments. Default is develop'
-        required: false
-        default: dev
-    outputs:
-      revision:
-        description: 'The new version that was created and tagged in the format of <major>.<minor>.<build>[.<pre-release-tag>]'
-        value: ${{ steps.tag-version.outputs.revision }}
-      is-prerelease:
-        description: 'Is true if this is a release into a non-production environment and indicates the build may be unstable. Returns false otherwise.'
-        value: ${{ steps.tag-version.outputs.is-prerelease }}
+      - master
+
 jobs:
-  tag-changes:
+  tag:
+    runs-on: ubuntu-latest
     steps:
-      - id: tag-version
-        run: bash $GITHUB_ACTION_PATH/src/tag-version.sh ${{ inputs.production-branch }} ${{ inputs.dev-branch }}
-        shell: bash
+    - uses: actions/checkout@v2
+    - uses: ./
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        version_assertion_command: 'grep -q "\"version\": \"$version\"" package.json && grep -q "^  \"version\": \"$version\"" package-lock.json'
+        version_tag_prefix: 'v'
+        annotated: true
