@@ -1,0 +1,2645 @@
+[
+    {
+        "price": 66091.9,
+        "change": -2.85,
+        "quote": "USD",
+        "baseName": "Bitcoin",
+        "base": "BTC",
+        "marketCap": 1339660036039
+    },
+    {
+        "price": 1959.51,
+        "change": -4.73,
+        "quote": "USD",
+        "baseName": "Ethereum",
+        "base": "ETH",
+        "marketCap": 240541787908
+    },
+    {
+        "price": 1.0012,
+        "change": 0.02,
+        "quote": "USD",
+        "baseName": "Tether USDt",
+        "base": "USDT",
+        "marketCap": 183597561171
+    },
+    {
+        "price": 1.38173,
+        "change": -3.87,
+        "quote": "USD",
+        "baseName": "XRP",
+        "base": "XRP",
+        "marketCap": 85213336554
+    },
+    {
+        "price": 614.9,
+        "change": -1.44,
+        "quote": "USD",
+        "baseName": "BNB",
+        "base": "BNB",
+        "marketCap": 84638353777
+    },
+    {
+        "price": 1.0002,
+        "change": -0.02,
+        "quote": "USD",
+        "baseName": "USDC",
+        "base": "USDC",
+        "marketCap": 75236237124
+    },
+    {
+        "price": 83.46,
+        "change": -3.9,
+        "quote": "USD",
+        "baseName": "Solana",
+        "base": "SOL",
+        "marketCap": 48612572652
+    },
+    {
+        "price": 0.284999,
+        "change": -0.63,
+        "quote": "USD",
+        "baseName": "TRON",
+        "base": "TRX",
+        "marketCap": 26996377258
+    },
+    {
+        "price": 0.09491,
+        "change": -3.66,
+        "quote": "USD",
+        "baseName": "Dogecoin",
+        "base": "DOGE",
+        "marketCap": 16331240608
+    },
+    {
+        "price": 0.28155,
+        "change": -2.74,
+        "quote": "USD",
+        "baseName": "Cardano",
+        "base": "ADA",
+        "marketCap": 10385112942
+    },
+    {
+        "price": 473.73,
+        "change": -5.41,
+        "quote": "USD",
+        "baseName": "Bitcoin Cash",
+        "base": "BCH",
+        "marketCap": 9604298095
+    },
+    {
+        "price": 66107.4,
+        "change": -2.86,
+        "quote": "USD",
+        "baseName": "Wrapped Bitcoin",
+        "base": "WBTC",
+        "marketCap": 8064540357
+    },
+    {
+        "price": 28.375,
+        "change": -0.57,
+        "quote": "USD",
+        "baseName": "Hyperliquid",
+        "base": "HYPE",
+        "marketCap": 7578507286
+    },
+    {
+        "price": 8.833,
+        "change": -4.19,
+        "quote": "USD",
+        "baseName": "Chainlink",
+        "base": "LINK",
+        "marketCap": 6364901581
+    },
+    {
+        "price": 1.0025,
+        "change": -0.12,
+        "quote": "USD",
+        "baseName": "Dai",
+        "base": "DAI",
+        "marketCap": 5365779278
+    },
+    {
+        "price": 0.15942,
+        "change": -2.54,
+        "quote": "USD",
+        "baseName": "Stellar",
+        "base": "XLM",
+        "marketCap": 5364851035
+    },
+    {
+        "price": 1.0002,
+        "change": 0.03,
+        "quote": "USDT",
+        "baseName": "World Liberty Financial USD",
+        "base": "USD1",
+        "marketCap": 4700714377
+    },
+    {
+        "price": 0.10045,
+        "change": -1.62,
+        "quote": "USD",
+        "baseName": "Hedera",
+        "base": "HBAR",
+        "marketCap": 4371067042
+    },
+    {
+        "price": 54.53,
+        "change": -2.36,
+        "quote": "USD",
+        "baseName": "Litecoin",
+        "base": "LTC",
+        "marketCap": 4258694520
+    },
+    {
+        "price": 9.0184,
+        "change": -2.42,
+        "quote": "USD",
+        "baseName": "Avalanche",
+        "base": "AVAX",
+        "marketCap": 3975259356
+    },
+    {
+        "price": 0.916,
+        "change": -2.87,
+        "quote": "USD",
+        "baseName": "Sui",
+        "base": "SUI",
+        "marketCap": 3595307608
+    },
+    {
+        "price": 0.00000586,
+        "change": -3.77,
+        "quote": "USD",
+        "baseName": "Shiba Inu",
+        "base": "SHIB",
+        "marketCap": 3498031582
+    },
+    {
+        "price": 1.3066,
+        "change": 2.34,
+        "quote": "USD",
+        "baseName": "Toncoin",
+        "base": "TON",
+        "marketCap": 3204158480
+    },
+    {
+        "price": 0.0766,
+        "change": -1.92,
+        "quote": "USD",
+        "baseName": "Cronos",
+        "base": "CRO",
+        "marketCap": 3178058237
+    },
+    {
+        "price": 0.11511,
+        "change": -0.43,
+        "quote": "USD",
+        "baseName": "World Liberty Financial",
+        "base": "WLFI",
+        "marketCap": 3171050743
+    },
+    {
+        "price": 1.5615,
+        "change": -1.2,
+        "quote": "USD",
+        "baseName": "Polkadot",
+        "base": "DOT",
+        "marketCap": 2671336242
+    },
+    {
+        "price": 5210.2,
+        "change": 0.53,
+        "quote": "USD",
+        "baseName": "PAX Gold",
+        "base": "PAXG",
+        "marketCap": 2456718848
+    },
+    {
+        "price": 3.7565,
+        "change": -6.38,
+        "quote": "USD",
+        "baseName": "Uniswap",
+        "base": "UNI",
+        "marketCap": 2406280705
+    },
+    {
+        "price": 0.638,
+        "change": 1.39,
+        "quote": "USD",
+        "baseName": "Mantle",
+        "base": "MNT",
+        "marketCap": 2079735665
+    },
+    {
+        "price": 180.4,
+        "change": -1.8,
+        "quote": "USD",
+        "baseName": "Bittensor",
+        "base": "TAO",
+        "marketCap": 1946755784
+    },
+    {
+        "price": 116.23,
+        "change": 1.28,
+        "quote": "USD",
+        "baseName": "Aave",
+        "base": "AAVE",
+        "marketCap": 1817243919
+    },
+    {
+        "price": 0.6956,
+        "change": -1.73,
+        "quote": "USD",
+        "baseName": "Aster",
+        "base": "ASTER",
+        "marketCap": 1710917442
+    },
+    {
+        "price": 0.1696,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "Pi",
+        "base": "PI",
+        "marketCap": 1596879025
+    },
+    {
+        "price": 0.00000374,
+        "change": -5.55,
+        "quote": "USD",
+        "baseName": "Pepe",
+        "base": "PEPE",
+        "marketCap": 1571658995
+    },
+    {
+        "price": 0.067641,
+        "change": -2.8,
+        "quote": "USD",
+        "baseName": "Sky",
+        "base": "SKY",
+        "marketCap": 1569246042
+    },
+    {
+        "price": 1.11935,
+        "change": -0.23,
+        "quote": "USD",
+        "baseName": "NEAR Protocol",
+        "base": "NEAR",
+        "marketCap": 1462545799
+    },
+    {
+        "price": 2.5203,
+        "change": 4.82,
+        "quote": "USD",
+        "baseName": "Internet Computer",
+        "base": "ICP",
+        "marketCap": 1399441548
+    },
+    {
+        "price": 8.7479,
+        "change": -2.23,
+        "quote": "USD",
+        "baseName": "Ethereum Classic",
+        "base": "ETC",
+        "marketCap": 1388905902
+    },
+    {
+        "price": 0.26197,
+        "change": -3.02,
+        "quote": "USD",
+        "baseName": "Ondo",
+        "base": "ONDO",
+        "marketCap": 1296739799
+    },
+    {
+        "price": 0.1106,
+        "change": 0.45,
+        "quote": "USD",
+        "baseName": "Polygon (prev. MATIC)",
+        "base": "POL",
+        "marketCap": 1209165475
+    },
+    {
+        "price": 0.397,
+        "change": -1.73,
+        "quote": "USD",
+        "baseName": "Worldcoin",
+        "base": "WLD",
+        "marketCap": 1154957950
+    },
+    {
+        "price": 3.6579,
+        "change": -2.36,
+        "quote": "USD",
+        "baseName": "Jupiter Perps LP",
+        "base": "JLP",
+        "marketCap": 1114527490
+    },
+    {
+        "price": 0.05936,
+        "change": 0.11,
+        "quote": "USD",
+        "baseName": "Midnight",
+        "base": "NIGHT",
+        "marketCap": 999146322
+    },
+    {
+        "price": 1.8757,
+        "change": -1.63,
+        "quote": "USD",
+        "baseName": "Cosmos",
+        "base": "ATOM",
+        "marketCap": 946583440
+    },
+    {
+        "price": 0.103625,
+        "change": -5.96,
+        "quote": "USD",
+        "baseName": "Ethena",
+        "base": "ENA",
+        "marketCap": 875783115
+    },
+    {
+        "price": 0.03067,
+        "change": -7.39,
+        "quote": "USD",
+        "baseName": "Kaspa",
+        "base": "KAS",
+        "marketCap": 849985775
+    },
+    {
+        "price": 0.0094586,
+        "change": -3.4,
+        "quote": "USD",
+        "baseName": "Flare",
+        "base": "FLR",
+        "marketCap": 810649981
+    },
+    {
+        "price": 0.086779,
+        "change": -3.3,
+        "quote": "USD",
+        "baseName": "Algorand",
+        "base": "ALGO",
+        "marketCap": 784612875
+    },
+    {
+        "price": 3.3691,
+        "change": -3.77,
+        "quote": "USD",
+        "baseName": "OFFICIAL TRUMP",
+        "base": "TRUMP",
+        "marketCap": 783218756
+    },
+    {
+        "price": 63.6,
+        "change": -2.34,
+        "quote": "USD",
+        "baseName": "Quant",
+        "base": "QNT",
+        "marketCap": 773020483
+    },
+    {
+        "price": 0.97188,
+        "change": 1.64,
+        "quote": "USD",
+        "baseName": "Aptos",
+        "base": "APT",
+        "marketCap": 772420530
+    },
+    {
+        "price": 0.9979,
+        "change": -1.18,
+        "quote": "USD",
+        "baseName": "Filecoin",
+        "base": "FIL",
+        "marketCap": 767481624
+    },
+    {
+        "price": 1.439,
+        "change": -1.9,
+        "quote": "USD",
+        "baseName": "Render",
+        "base": "RENDER",
+        "marketCap": 755407168
+    },
+    {
+        "price": 1.7799,
+        "change": -3.85,
+        "quote": "USD",
+        "baseName": "Morpho",
+        "base": "MORPHO",
+        "marketCap": 699740807
+    },
+    {
+        "price": 0.03397,
+        "change": -5.19,
+        "quote": "USD",
+        "baseName": "XDC Network",
+        "base": "XDC",
+        "marketCap": 685162020
+    },
+    {
+        "price": 0.64752,
+        "change": -22.95,
+        "quote": "USD",
+        "baseName": "pippin",
+        "base": "PIPPIN",
+        "marketCap": 682071132
+    },
+    {
+        "price": 0.0018493,
+        "change": 4.11,
+        "quote": "USD",
+        "baseName": "Pump.fun",
+        "base": "PUMP",
+        "marketCap": 680434535
+    },
+    {
+        "price": 0.007477,
+        "change": -2.22,
+        "quote": "USD",
+        "baseName": "VeChain",
+        "base": "VET",
+        "marketCap": 654246007
+    },
+    {
+        "price": 0.104132,
+        "change": 5.5,
+        "quote": "USD",
+        "baseName": "Arbitrum",
+        "base": "ARB",
+        "marketCap": 640640737
+    },
+    {
+        "price": 0.15473,
+        "change": -1.38,
+        "quote": "USD",
+        "baseName": "Jupiter",
+        "base": "JUP",
+        "marketCap": 546948074
+    },
+    {
+        "price": 0.00000605,
+        "change": -3.35,
+        "quote": "USD",
+        "baseName": "Bonk",
+        "base": "BONK",
+        "marketCap": 543733150
+    },
+    {
+        "price": 1.693,
+        "change": 11.97,
+        "quote": "USD",
+        "baseName": "LayerZero",
+        "base": "ZRO",
+        "marketCap": 515234530
+    },
+    {
+        "price": 0.26314,
+        "change": 0.57,
+        "quote": "USD",
+        "baseName": "Stacks",
+        "base": "STX",
+        "marketCap": 487843758
+    },
+    {
+        "price": 0.069453,
+        "change": -1.93,
+        "quote": "USD",
+        "baseName": "Sei",
+        "base": "SEI",
+        "marketCap": 476266410
+    },
+    {
+        "price": 1.1824,
+        "change": 0.01,
+        "quote": "USD",
+        "baseName": "EURC",
+        "base": "EURC",
+        "marketCap": 464128114
+    },
+    {
+        "price": 0.7018,
+        "change": 0.73,
+        "quote": "USD",
+        "baseName": "Virtuals Protocol",
+        "base": "VIRTUAL",
+        "marketCap": 463663538
+    },
+    {
+        "price": 0.00693,
+        "change": -1.7,
+        "quote": "USD",
+        "baseName": "Pudgy Penguins",
+        "base": "PENGU",
+        "marketCap": 442432214
+    },
+    {
+        "price": 34.23,
+        "change": -2.17,
+        "quote": "USD",
+        "baseName": "Dash",
+        "base": "DASH",
+        "marketCap": 435594779
+    },
+    {
+        "price": 0.2431,
+        "change": -11.57,
+        "quote": "USD",
+        "baseName": "Kite",
+        "base": "KITE",
+        "marketCap": 433004430
+    },
+    {
+        "price": 1.2912,
+        "change": -1.6,
+        "quote": "USD",
+        "baseName": "PancakeSwap",
+        "base": "CAKE",
+        "marketCap": 430227581
+    },
+    {
+        "price": 0.3903,
+        "change": -0.35,
+        "quote": "USD",
+        "baseName": "Tezos",
+        "base": "XTZ",
+        "marketCap": 427219308
+    },
+    {
+        "price": 0.045545,
+        "change": -3.73,
+        "quote": "USD",
+        "baseName": "JUST",
+        "base": "JST",
+        "marketCap": 395397669
+    },
+    {
+        "price": 0.507,
+        "change": -1.55,
+        "quote": "USD",
+        "baseName": "ether.fi",
+        "base": "ETHFI",
+        "marketCap": 380347113
+    },
+    {
+        "price": 0.16055,
+        "change": -1.77,
+        "quote": "USD",
+        "baseName": "Artificial Superintelligence Alliance",
+        "base": "FET",
+        "marketCap": 368600377
+    },
+    {
+        "price": 0.2468,
+        "change": -2.68,
+        "quote": "USD",
+        "baseName": "Curve DAO Token",
+        "base": "CRV",
+        "marketCap": 367352833
+    },
+    {
+        "price": 0.9749,
+        "change": -4.86,
+        "quote": "USD",
+        "baseName": "Story",
+        "base": "IP",
+        "marketCap": 349418718
+    },
+    {
+        "price": 0.0557,
+        "change": -1.59,
+        "quote": "USD",
+        "baseName": "Kaia",
+        "base": "KAIA",
+        "marketCap": 348223804
+    },
+    {
+        "price": 0.0332,
+        "change": -0.89,
+        "quote": "USD",
+        "baseName": "Chiliz",
+        "base": "CHZ",
+        "marketCap": 344226972
+    },
+    {
+        "price": 0.16906,
+        "change": -0.41,
+        "quote": "USD",
+        "baseName": "Immutable",
+        "base": "IMX",
+        "marketCap": 344199084
+    },
+    {
+        "price": 1.3635,
+        "change": -5.85,
+        "quote": "USD",
+        "baseName": "Lighter",
+        "base": "LIT",
+        "marketCap": 343345752
+    },
+    {
+        "price": 126.54,
+        "change": -3.26,
+        "quote": "USD",
+        "baseName": "Gnosis",
+        "base": "GNO",
+        "marketCap": 337395904
+    },
+    {
+        "price": 3.352e-7,
+        "change": -0.2,
+        "quote": "USD",
+        "baseName": "AINFT",
+        "base": "NFT",
+        "marketCap": 331402137
+    },
+    {
+        "price": 0.351,
+        "change": -6.89,
+        "quote": "USD",
+        "baseName": "Aerodrome Finance",
+        "base": "AERO",
+        "marketCap": 325775393
+    },
+    {
+        "price": 3.1729,
+        "change": -0.78,
+        "quote": "USD",
+        "baseName": "Injective",
+        "base": "INJ",
+        "marketCap": 322968236
+    },
+    {
+        "price": 0.01617,
+        "change": -0.55,
+        "quote": "USD",
+        "baseName": "Sun [New]",
+        "base": "SUN",
+        "marketCap": 310190717
+    },
+    {
+        "price": 0.051647,
+        "change": -2.02,
+        "quote": "USD",
+        "baseName": "Pyth Network",
+        "base": "PYTH",
+        "marketCap": 301881575
+    },
+    {
+        "price": 0.3308,
+        "change": -2.19,
+        "quote": "USD",
+        "baseName": "Celestia",
+        "base": "TIA",
+        "marketCap": 300277283
+    },
+    {
+        "price": 0.1193,
+        "change": -13.32,
+        "quote": "USD",
+        "baseName": "Humanity Protocol",
+        "base": "H",
+        "marketCap": 298473554
+    },
+    {
+        "price": 0.0686,
+        "change": -2.41,
+        "quote": "USD",
+        "baseName": "IOTA",
+        "base": "IOTA",
+        "marketCap": 298429082
+    },
+    {
+        "price": 0.3097,
+        "change": -3.21,
+        "quote": "USD",
+        "baseName": "SPX6900",
+        "base": "SPX",
+        "marketCap": 293523231
+    },
+    {
+        "price": 0.026725,
+        "change": -1.08,
+        "quote": "USD",
+        "baseName": "The Graph",
+        "base": "GRT",
+        "marketCap": 290187286
+    },
+    {
+        "price": 0.0057152,
+        "change": -3.87,
+        "quote": "USD",
+        "baseName": "JasmyCoin",
+        "base": "JASMY",
+        "marketCap": 285737766
+    },
+    {
+        "price": 0.00002925,
+        "change": -0.94,
+        "quote": "USD",
+        "baseName": "FLOKI",
+        "base": "FLOKI",
+        "marketCap": 281857636
+    },
+    {
+        "price": 0.07869,
+        "change": 0.66,
+        "quote": "USD",
+        "baseName": "DoubleZero",
+        "base": "2Z",
+        "marketCap": 278861460
+    },
+    {
+        "price": 0.64384,
+        "change": -0.58,
+        "quote": "USD",
+        "baseName": "Legacy Frax Dollar",
+        "base": "FRAX",
+        "marketCap": 273607917
+    },
+    {
+        "price": 0.2346,
+        "change": -2.85,
+        "quote": "USD",
+        "baseName": "Maple Finance",
+        "base": "SYRUP",
+        "marketCap": 272395422
+    },
+    {
+        "price": 0.12275,
+        "change": 0.99,
+        "quote": "USD",
+        "baseName": "Optimism",
+        "base": "OP",
+        "marketCap": 265971789
+    },
+    {
+        "price": 0.30728,
+        "change": -3.21,
+        "quote": "USD",
+        "baseName": "Lido DAO",
+        "base": "LDO",
+        "marketCap": 265156105
+    },
+    {
+        "price": 0.04961,
+        "change": -2.49,
+        "quote": "USD",
+        "baseName": "Conflux",
+        "base": "CFX",
+        "marketCap": 259459526
+    },
+    {
+        "price": 6.236,
+        "change": -2.37,
+        "quote": "USD",
+        "baseName": "Ethereum Name Service",
+        "base": "ENS",
+        "marketCap": 241687035
+    },
+    {
+        "price": 1.3477,
+        "change": -1.28,
+        "quote": "USD",
+        "baseName": "Axie Infinity",
+        "base": "AXS",
+        "marketCap": 231252202
+    },
+    {
+        "price": 0.085377,
+        "change": -0.14,
+        "quote": "USD",
+        "baseName": "The Sandbox",
+        "base": "SAND",
+        "marketCap": 230758445
+    },
+    {
+        "price": 0.020761,
+        "change": -4.73,
+        "quote": "USD",
+        "baseName": "Monad",
+        "base": "MON",
+        "marketCap": 227681452
+    },
+    {
+        "price": 4.91,
+        "change": 21.23,
+        "quote": "USD",
+        "baseName": "Venice Token",
+        "base": "VVV",
+        "marketCap": 223309469
+    },
+    {
+        "price": 1.28,
+        "change": -0.77,
+        "quote": "USD",
+        "baseName": "Pendle",
+        "base": "PENDLE",
+        "marketCap": 215316775
+    },
+    {
+        "price": 0.4935,
+        "change": -0.78,
+        "quote": "USD",
+        "baseName": "Trust Wallet Token",
+        "base": "TWT",
+        "marketCap": 212655516
+    },
+    {
+        "price": 0.20675,
+        "change": -1.76,
+        "quote": "USD",
+        "baseName": "dogwifhat",
+        "base": "WIF",
+        "marketCap": 208565800
+    },
+    {
+        "price": 2.7778,
+        "change": -0.68,
+        "quote": "USD",
+        "baseName": "Neo",
+        "base": "NEO",
+        "marketCap": 197471523
+    },
+    {
+        "price": 0.86705,
+        "change": 2.84,
+        "quote": "USD",
+        "baseName": "Lombard",
+        "base": "BARD",
+        "marketCap": 196767893
+    },
+    {
+        "price": 0.097488,
+        "change": 0.45,
+        "quote": "USD",
+        "baseName": "Decentraland",
+        "base": "MANA",
+        "marketCap": 195568223
+    },
+    {
+        "price": 0.19152,
+        "change": -2.18,
+        "quote": "USD",
+        "baseName": "Theta Network",
+        "base": "THETA",
+        "marketCap": 194114674
+    },
+    {
+        "price": 18.71,
+        "change": 1.13,
+        "quote": "USD",
+        "baseName": "Compound",
+        "base": "COMP",
+        "marketCap": 189162894
+    },
+    {
+        "price": 0.08125,
+        "change": -0.34,
+        "quote": "USD",
+        "baseName": "Falcon Finance",
+        "base": "FF",
+        "marketCap": 188623178
+    },
+    {
+        "price": 0.0049045,
+        "change": 0.2,
+        "quote": "USD",
+        "baseName": "Onyxcoin",
+        "base": "XCN",
+        "marketCap": 184153739
+    },
+    {
+        "price": 0.096516,
+        "change": -0.31,
+        "quote": "USD",
+        "baseName": "Plasma",
+        "base": "XPL",
+        "marketCap": 179427655
+    },
+    {
+        "price": 0.16425,
+        "change": -3.35,
+        "quote": "USD",
+        "baseName": "Fartcoin",
+        "base": "FARTCOIN",
+        "marketCap": 172083689
+    },
+    {
+        "price": 0.0232,
+        "change": -1.61,
+        "quote": "USD",
+        "baseName": "Sentient",
+        "base": "SENT",
+        "marketCap": 169510306
+    },
+    {
+        "price": 1.6781,
+        "change": -9.59,
+        "quote": "USD",
+        "baseName": "Convex Finance",
+        "base": "CVX",
+        "marketCap": 168977401
+    },
+    {
+        "price": 0.6048,
+        "change": -2.19,
+        "quote": "USD",
+        "baseName": "Raydium",
+        "base": "RAY",
+        "marketCap": 166171908
+    },
+    {
+        "price": 0.10862,
+        "change": -5.91,
+        "quote": "USD",
+        "baseName": "Basic Attention Token",
+        "base": "BAT",
+        "marketCap": 162460273
+    },
+    {
+        "price": 0.31518,
+        "change": -6.61,
+        "quote": "USD",
+        "baseName": "OriginTrail",
+        "base": "TRAC",
+        "marketCap": 157784394
+    },
+    {
+        "price": 0.0000076,
+        "change": -4.04,
+        "quote": "USD",
+        "baseName": "eCash",
+        "base": "XEC",
+        "marketCap": 152492098
+    },
+    {
+        "price": 0.39748,
+        "change": -3.35,
+        "quote": "USD",
+        "baseName": "THORChain",
+        "base": "RUNE",
+        "marketCap": 141546844
+    },
+    {
+        "price": 0.6438,
+        "change": -1.97,
+        "quote": "USD",
+        "baseName": "0G",
+        "base": "0G",
+        "marketCap": 139667314
+    },
+    {
+        "price": 4.5355,
+        "change": -0.4,
+        "quote": "USD",
+        "baseName": "MultiversX",
+        "base": "EGLD",
+        "marketCap": 136757532
+    },
+    {
+        "price": 0.62757,
+        "change": 1.95,
+        "quote": "USD",
+        "baseName": "Berachain",
+        "base": "BERA",
+        "marketCap": 134752501
+    },
+    {
+        "price": 0.093813,
+        "change": -1.88,
+        "quote": "USD",
+        "baseName": "1inch",
+        "base": "1INCH",
+        "marketCap": 132985464
+    },
+    {
+        "price": 0.0809,
+        "change": -0.97,
+        "quote": "USD",
+        "baseName": "Vaulta",
+        "base": "A",
+        "marketCap": 131154104
+    },
+    {
+        "price": 0.28606,
+        "change": 1.7,
+        "quote": "USD",
+        "baseName": "Jito",
+        "base": "JTO",
+        "marketCap": 127171845
+    },
+    {
+        "price": 0.077914,
+        "change": -0.38,
+        "quote": "USD",
+        "baseName": "Walrus",
+        "base": "WAL",
+        "marketCap": 125442329
+    },
+    {
+        "price": 0.0256,
+        "change": -3.68,
+        "quote": "USD",
+        "baseName": "DeepBook Protocol",
+        "base": "DEEP",
+        "marketCap": 124071734
+    },
+    {
+        "price": 0.48147,
+        "change": 26.7,
+        "quote": "USD",
+        "baseName": "MYX Finance",
+        "base": "MYX",
+        "marketCap": 121507273
+    },
+    {
+        "price": 0.040957,
+        "change": -1.06,
+        "quote": "USD",
+        "baseName": "Sonic",
+        "base": "S",
+        "marketCap": 119933436
+    },
+    {
+        "price": 0.33951,
+        "change": -6.86,
+        "quote": "USD",
+        "baseName": "Synthetix",
+        "base": "SNX",
+        "marketCap": 118442869
+    },
+    {
+        "price": 0.19304,
+        "change": -4.17,
+        "quote": "USD",
+        "baseName": "EigenCloud",
+        "base": "EIGEN",
+        "marketCap": 118097451
+    },
+    {
+        "price": 0.2077,
+        "change": -6.6,
+        "quote": "USD",
+        "baseName": "CoW Protocol",
+        "base": "COW",
+        "marketCap": 117786398
+    },
+    {
+        "price": 2.3389,
+        "change": -0.42,
+        "quote": "USD",
+        "baseName": "Livepeer",
+        "base": "LPT",
+        "marketCap": 117414190
+    },
+    {
+        "price": 1.686,
+        "change": -0.17,
+        "quote": "USD",
+        "baseName": "Arweave",
+        "base": "AR",
+        "marketCap": 112350639
+    },
+    {
+        "price": 0.020879,
+        "change": -4.04,
+        "quote": "USD",
+        "baseName": "Seeker",
+        "base": "SKR",
+        "marketCap": 111048975
+    },
+    {
+        "price": 0.112181,
+        "change": -3.21,
+        "quote": "USD",
+        "baseName": "Comedian",
+        "base": "BAN",
+        "marketCap": 110761402
+    },
+    {
+        "price": 0.109,
+        "change": -4.38,
+        "quote": "USD",
+        "baseName": "Official Melania Meme",
+        "base": "MELANIA",
+        "marketCap": 110025728
+    },
+    {
+        "price": 0.019424,
+        "change": -0.15,
+        "quote": "USD",
+        "baseName": "Wormhole",
+        "base": "W",
+        "marketCap": 106342120
+    },
+    {
+        "price": 1.5795,
+        "change": -2.14,
+        "quote": "USD",
+        "baseName": "Gas",
+        "base": "GAS",
+        "marketCap": 103253464
+    },
+    {
+        "price": 5.589,
+        "change": -0.4,
+        "quote": "USD",
+        "baseName": "Horizen",
+        "base": "ZEN",
+        "marketCap": 101008473
+    },
+    {
+        "price": 0.92325,
+        "change": -0.75,
+        "quote": "USD",
+        "baseName": "Qtum",
+        "base": "QTUM",
+        "marketCap": 99185438
+    },
+    {
+        "price": 0.33136,
+        "change": -0.18,
+        "quote": "USD",
+        "baseName": "YZY MONEY",
+        "base": "YZY",
+        "marketCap": 99080368
+    },
+    {
+        "price": 0.01293,
+        "change": 1.17,
+        "quote": "USD",
+        "baseName": "Oasis",
+        "base": "ROSE",
+        "marketCap": 98868843
+    },
+    {
+        "price": 0.0019172,
+        "change": -3.77,
+        "quote": "USD",
+        "baseName": "Beam",
+        "base": "BEAM",
+        "marketCap": 96547671
+    },
+    {
+        "price": 0.0014808,
+        "change": -1.73,
+        "quote": "USD",
+        "baseName": "Reserve Rights",
+        "base": "RSR",
+        "marketCap": 93751944
+    },
+    {
+        "price": 0.18339,
+        "change": 0.02,
+        "quote": "USD",
+        "baseName": "Meteora",
+        "base": "MET",
+        "marketCap": 93560962
+    },
+    {
+        "price": 0.106968,
+        "change": -3.43,
+        "quote": "USD",
+        "baseName": "0x Protocol",
+        "base": "ZRX",
+        "marketCap": 92172904
+    },
+    {
+        "price": 5.0546,
+        "change": -0.78,
+        "quote": "USD",
+        "baseName": "Kusama",
+        "base": "KSM",
+        "marketCap": 91178954
+    },
+    {
+        "price": 0.00021059,
+        "change": -1.22,
+        "quote": "USD",
+        "baseName": "Toshi",
+        "base": "TOSHI",
+        "marketCap": 88532247
+    },
+    {
+        "price": 0.080677,
+        "change": -1.94,
+        "quote": "USD",
+        "baseName": "Core",
+        "base": "CORE",
+        "marketCap": 87691093
+    },
+    {
+        "price": 407.97,
+        "change": -1.85,
+        "quote": "USD",
+        "baseName": "Tesla tokenized stock (xStock)",
+        "base": "TSLAX",
+        "marketCap": 86871654
+    },
+    {
+        "price": 0.018897,
+        "change": -2.28,
+        "quote": "USD",
+        "baseName": "ZORA",
+        "base": "ZORA",
+        "marketCap": 84864397
+    },
+    {
+        "price": 0.0042806,
+        "change": 1.69,
+        "quote": "USD",
+        "baseName": "Zilliqa",
+        "base": "ZIL",
+        "marketCap": 84761948
+    },
+    {
+        "price": 0.098034,
+        "change": 0.01,
+        "quote": "USD",
+        "baseName": "dYdX",
+        "base": "DYDX",
+        "marketCap": 82179432
+    },
+    {
+        "price": 0.10693,
+        "change": 0.28,
+        "quote": "USD",
+        "baseName": "ApeCoin",
+        "base": "APE",
+        "marketCap": 81575428
+    },
+    {
+        "price": 0.33691,
+        "change": 3.85,
+        "quote": "USD",
+        "baseName": "KAITO",
+        "base": "KAITO",
+        "marketCap": 81408046
+    },
+    {
+        "price": 0.059171,
+        "change": -0.5,
+        "quote": "USD",
+        "baseName": "Mina",
+        "base": "MINA",
+        "marketCap": 75756517
+    },
+    {
+        "price": 0.001575,
+        "change": 0.83,
+        "quote": "USD",
+        "baseName": "Nervos Network",
+        "base": "CKB",
+        "marketCap": 75166355
+    },
+    {
+        "price": 0.1944,
+        "change": -0.96,
+        "quote": "USD",
+        "baseName": "Four",
+        "base": "FORM",
+        "marketCap": 74264391
+    },
+    {
+        "price": 0.006618,
+        "change": 1.5,
+        "quote": "USD",
+        "baseName": "Threshold",
+        "base": "T",
+        "marketCap": 74264248
+    },
+    {
+        "price": 0.11544,
+        "change": 0.08,
+        "quote": "USD",
+        "baseName": "SuperVerse",
+        "base": "SUPER",
+        "marketCap": 73813662
+    },
+    {
+        "price": 0.022041,
+        "change": -0.07,
+        "quote": "USD",
+        "baseName": "Movement",
+        "base": "MOVE",
+        "marketCap": 73724610
+    },
+    {
+        "price": 0.16801,
+        "change": 1.27,
+        "quote": "USD",
+        "baseName": "SOON",
+        "base": "SOON",
+        "marketCap": 73459536
+    },
+    {
+        "price": 0.007088,
+        "change": -5.26,
+        "quote": "USD",
+        "baseName": "Brett (Based)",
+        "base": "BRETT",
+        "marketCap": 72152257
+    },
+    {
+        "price": 0.07808,
+        "change": -1.01,
+        "quote": "USD",
+        "baseName": "Aleo",
+        "base": "ALEO",
+        "marketCap": 71573276
+    },
+    {
+        "price": 6.82,
+        "change": -1.58,
+        "quote": "USD",
+        "baseName": "GMX",
+        "base": "GMX",
+        "marketCap": 71464318
+    },
+    {
+        "price": 0.279,
+        "change": 1.71,
+        "quote": "USD",
+        "baseName": "NEXPACE",
+        "base": "NXPC",
+        "marketCap": 70632587
+    },
+    {
+        "price": 0.00693,
+        "change": -4.54,
+        "quote": "USD",
+        "baseName": "Alchemy Pay",
+        "base": "ACH",
+        "marketCap": 69839929
+    },
+    {
+        "price": 0.0009969,
+        "change": -3.4,
+        "quote": "USD",
+        "baseName": "Turbo",
+        "base": "TURBO",
+        "marketCap": 69608450
+    },
+    {
+        "price": 0.039418,
+        "change": 7.9,
+        "quote": "USD",
+        "baseName": "Flow",
+        "base": "FLOW",
+        "marketCap": 68913999
+    },
+    {
+        "price": 0.077842,
+        "change": -4.33,
+        "quote": "USD",
+        "baseName": "Alchemist AI",
+        "base": "ALCH",
+        "marketCap": 66289205
+    },
+    {
+        "price": 0.051947,
+        "change": -1.89,
+        "quote": "USD",
+        "baseName": "ZetaChain",
+        "base": "ZETA",
+        "marketCap": 66248897
+    },
+    {
+        "price": 0.021891,
+        "change": -10.24,
+        "quote": "USD",
+        "baseName": "Aztec",
+        "base": "AZTEC",
+        "marketCap": 65837980
+    },
+    {
+        "price": 0.18523,
+        "change": -3.64,
+        "quote": "USD",
+        "baseName": "Bitlayer",
+        "base": "BTR",
+        "marketCap": 64829770
+    },
+    {
+        "price": 0.0011104,
+        "change": -0.8,
+        "quote": "USD",
+        "baseName": "Siacoin",
+        "base": "SC",
+        "marketCap": 62405439
+    },
+    {
+        "price": 0.02581,
+        "change": 72.18,
+        "quote": "USD",
+        "baseName": "Sahara AI",
+        "base": "SAHARA",
+        "marketCap": 61082706
+    },
+    {
+        "price": 0.20695,
+        "change": -1.11,
+        "quote": "USD",
+        "baseName": "SushiSwap",
+        "base": "SUSHI",
+        "marketCap": 60602243
+    },
+    {
+        "price": 0.03443,
+        "change": 1.93,
+        "quote": "USD",
+        "baseName": "ETHGas",
+        "base": "GWEI",
+        "marketCap": 59346862
+    },
+    {
+        "price": 0.000589,
+        "change": -0.84,
+        "quote": "USD",
+        "baseName": "VeThor Token",
+        "base": "VTHO",
+        "marketCap": 58376651
+    },
+    {
+        "price": 0.003325,
+        "change": -3.84,
+        "quote": "USD",
+        "baseName": "Velo",
+        "base": "VELO",
+        "marketCap": 58129026
+    },
+    {
+        "price": 0.2958,
+        "change": 2.17,
+        "quote": "USD",
+        "baseName": "Succinct",
+        "base": "PROVE",
+        "marketCap": 58059784
+    },
+    {
+        "price": 0.22237,
+        "change": -2.97,
+        "quote": "USD",
+        "baseName": "Grass",
+        "base": "GRASS",
+        "marketCap": 56303666
+    },
+    {
+        "price": 0.121,
+        "change": 0.83,
+        "quote": "USD",
+        "baseName": "Magic Eden",
+        "base": "ME",
+        "marketCap": 56212475
+    },
+    {
+        "price": 0.020205,
+        "change": -2.17,
+        "quote": "USD",
+        "baseName": "Blur",
+        "base": "BLUR",
+        "marketCap": 55953994
+    },
+    {
+        "price": 0.056005,
+        "change": -0.22,
+        "quote": "USD",
+        "baseName": "Pythia",
+        "base": "PYTHIA",
+        "marketCap": 55684808
+    },
+    {
+        "price": 0.00060873,
+        "change": -1.42,
+        "quote": "USD",
+        "baseName": "cat in a dogs world",
+        "base": "MEW",
+        "marketCap": 54952255
+    },
+    {
+        "price": 0.907,
+        "change": -0.54,
+        "quote": "USD",
+        "baseName": "Orca",
+        "base": "ORCA",
+        "marketCap": 54188380
+    },
+    {
+        "price": 0.04936,
+        "change": -0.8,
+        "quote": "USD",
+        "baseName": "Kava",
+        "base": "KAVA",
+        "marketCap": 53767210
+    },
+    {
+        "price": 2.504,
+        "change": 1.6,
+        "quote": "USD",
+        "baseName": "ORDI",
+        "base": "ORDI",
+        "marketCap": 53561843
+    },
+    {
+        "price": 0.1697,
+        "change": 5.14,
+        "quote": "USD",
+        "baseName": "RedStone",
+        "base": "RED",
+        "marketCap": 53487845
+    },
+    {
+        "price": 0.05151,
+        "change": -1.32,
+        "quote": "USD",
+        "baseName": "Moo Deng (moodengsol.com)",
+        "base": "MOODENG",
+        "marketCap": 51519648
+    },
+    {
+        "price": 0.0644,
+        "change": -1.22,
+        "quote": "USD",
+        "baseName": "Request",
+        "base": "REQ",
+        "marketCap": 51033329
+    },
+    {
+        "price": 0.022913,
+        "change": -4.48,
+        "quote": "USD",
+        "baseName": "Zama",
+        "base": "ZAMA",
+        "marketCap": 50646831
+    },
+    {
+        "price": 0.0031932,
+        "change": 0.29,
+        "quote": "USD",
+        "baseName": "Linea",
+        "base": "LINEA",
+        "marketCap": 49846384
+    },
+    {
+        "price": 0.02079,
+        "change": -0.76,
+        "quote": "USD",
+        "baseName": "Spark",
+        "base": "SPK",
+        "marketCap": 49750053
+    },
+    {
+        "price": 0.7212,
+        "change": -1.74,
+        "quote": "USD",
+        "baseName": "BSquared Network",
+        "base": "B2",
+        "marketCap": 48707163
+    },
+    {
+        "price": 2.9234,
+        "change": -2.79,
+        "quote": "USD",
+        "baseName": "ssv.network",
+        "base": "SSV",
+        "marketCap": 48564515
+    },
+    {
+        "price": 0.048344,
+        "change": -2.81,
+        "quote": "USD",
+        "baseName": "Popcat (SOL)",
+        "base": "POPCAT",
+        "marketCap": 48071534
+    },
+    {
+        "price": 0.18484,
+        "change": 2.86,
+        "quote": "USD",
+        "baseName": "Avantis",
+        "base": "AVNT",
+        "marketCap": 47642425
+    },
+    {
+        "price": 0.085903,
+        "change": 1.41,
+        "quote": "USD",
+        "baseName": "Drift",
+        "base": "DRIFT",
+        "marketCap": 47520544
+    },
+    {
+        "price": 0.079112,
+        "change": -0.28,
+        "quote": "USD",
+        "baseName": "Celo",
+        "base": "CELO",
+        "marketCap": 47110202
+    },
+    {
+        "price": 0.02996,
+        "change": -3.13,
+        "quote": "USD",
+        "baseName": "GUNZ",
+        "base": "GUN",
+        "marketCap": 47100413
+    },
+    {
+        "price": 0.046242,
+        "change": -1.28,
+        "quote": "USD",
+        "baseName": "Peanut the Squirrel",
+        "base": "PNUT",
+        "marketCap": 46613643
+    },
+    {
+        "price": 0.2092,
+        "change": -5.03,
+        "quote": "USD",
+        "baseName": "Somnia",
+        "base": "SOMI",
+        "marketCap": 46021096
+    },
+    {
+        "price": 0.034,
+        "change": -2.85,
+        "quote": "USD",
+        "baseName": "Loopring",
+        "base": "LRC",
+        "marketCap": 45980471
+    },
+    {
+        "price": 0.0227,
+        "change": -6.58,
+        "quote": "USD",
+        "baseName": "Bio Protocol",
+        "base": "BIO",
+        "marketCap": 45951634
+    },
+    {
+        "price": 0.0046417,
+        "change": -3.77,
+        "quote": "USD",
+        "baseName": "Banana For Scale",
+        "base": "BANANAS31",
+        "marketCap": 45848865
+    },
+    {
+        "price": 0.2316,
+        "change": -1.73,
+        "quote": "USD",
+        "baseName": "Lagrange",
+        "base": "LA",
+        "marketCap": 44995858
+    },
+    {
+        "price": 0.08851,
+        "change": -2.93,
+        "quote": "USD",
+        "baseName": "Dusk",
+        "base": "DUSK",
+        "marketCap": 44718682
+    },
+    {
+        "price": 0.43553,
+        "change": 0.08,
+        "quote": "USD",
+        "baseName": "Mask Network",
+        "base": "MASK",
+        "marketCap": 44063736
+    },
+    {
+        "price": 0.007667,
+        "change": 0.78,
+        "quote": "USD",
+        "baseName": "Altlayer",
+        "base": "ALT",
+        "marketCap": 43689056
+    },
+    {
+        "price": 0.097392,
+        "change": 0.25,
+        "quote": "USD",
+        "baseName": "Particle Network",
+        "base": "PARTI",
+        "marketCap": 43578518
+    },
+    {
+        "price": 0.0043239,
+        "change": -0.72,
+        "quote": "USD",
+        "baseName": "Ankr",
+        "base": "ANKR",
+        "marketCap": 43395934
+    },
+    {
+        "price": 1.9018,
+        "change": -6.86,
+        "quote": "USD",
+        "baseName": "Rocket Pool",
+        "base": "RPL",
+        "marketCap": 42266672
+    },
+    {
+        "price": 0.1596,
+        "change": -0.12,
+        "quote": "USD",
+        "baseName": "Pundi X (New)",
+        "base": "PUNDIX",
+        "marketCap": 42020555
+    },
+    {
+        "price": 0.44741,
+        "change": -2.4,
+        "quote": "USD",
+        "baseName": "UMA",
+        "base": "UMA",
+        "marketCap": 41111842
+    },
+    {
+        "price": 0.2005,
+        "change": -0.74,
+        "quote": "USD",
+        "baseName": "Audiera",
+        "base": "BEAT",
+        "marketCap": 41089645
+    },
+    {
+        "price": 0.04365,
+        "change": 1.37,
+        "quote": "USD",
+        "baseName": "Ontology",
+        "base": "ONT",
+        "marketCap": 41019721
+    },
+    {
+        "price": 0.009275,
+        "change": 0.33,
+        "quote": "USD",
+        "baseName": "GoPlus Security",
+        "base": "GPS",
+        "marketCap": 40994784
+    },
+    {
+        "price": 0.04012,
+        "change": -5.19,
+        "quote": "USD",
+        "baseName": "Useless Coin",
+        "base": "USELESS",
+        "marketCap": 40965639
+    },
+    {
+        "price": 14.64,
+        "change": 0.13,
+        "quote": "USD",
+        "baseName": "Tellor",
+        "base": "TRB",
+        "marketCap": 40630684
+    },
+    {
+        "price": 0.095341,
+        "change": -1.29,
+        "quote": "USD",
+        "baseName": "Storj",
+        "base": "STORJ",
+        "marketCap": 40627099
+    },
+    {
+        "price": 0.006639,
+        "change": 0.63,
+        "quote": "USD",
+        "baseName": "SKALE",
+        "base": "SKL",
+        "marketCap": 40532803
+    },
+    {
+        "price": 655.12,
+        "change": 0.34,
+        "quote": "USD",
+        "baseName": "Meta tokenized stock (xStock)",
+        "base": "METAX",
+        "marketCap": 39933462
+    },
+    {
+        "price": 185.12,
+        "change": -6.54,
+        "quote": "USD",
+        "baseName": "NVIDIA tokenized stock (xStock)",
+        "base": "NVDAX",
+        "marketCap": 39919328
+    },
+    {
+        "price": 0.00061975,
+        "change": -3.28,
+        "quote": "USD",
+        "baseName": "Memecoin",
+        "base": "MEME",
+        "marketCap": 39178731
+    },
+    {
+        "price": 0.02417,
+        "change": 2.76,
+        "quote": "USD",
+        "baseName": "Sign",
+        "base": "SIGN",
+        "marketCap": 39088166
+    },
+    {
+        "price": 0.019997,
+        "change": 0.31,
+        "quote": "USD",
+        "baseName": "Enjin Coin",
+        "base": "ENJ",
+        "marketCap": 38882582
+    },
+    {
+        "price": 0.00037902,
+        "change": -0.26,
+        "quote": "USD",
+        "baseName": "Notcoin",
+        "base": "NOT",
+        "marketCap": 37851134
+    },
+    {
+        "price": 0.011892,
+        "change": 1.54,
+        "quote": "USD",
+        "baseName": "GMT",
+        "base": "GMT",
+        "marketCap": 37203486
+    },
+    {
+        "price": 3.61e-8,
+        "change": -2.43,
+        "quote": "USDT",
+        "baseName": "Dogelon Mars",
+        "base": "ELON",
+        "marketCap": 36756891
+    },
+    {
+        "price": 0.211,
+        "change": -0.47,
+        "quote": "USD",
+        "baseName": "Band",
+        "base": "BAND",
+        "marketCap": 36609962
+    },
+    {
+        "price": 0.00244,
+        "change": -1.21,
+        "quote": "USD",
+        "baseName": "Harmony",
+        "base": "ONE",
+        "marketCap": 36553410
+    },
+    {
+        "price": 0.012596,
+        "change": 0.8,
+        "quote": "USD",
+        "baseName": "Babylon",
+        "base": "BABY",
+        "marketCap": 35770201
+    },
+    {
+        "price": 0.14115,
+        "change": -0.7,
+        "quote": "USD",
+        "baseName": "Brevis",
+        "base": "BREV",
+        "marketCap": 35380200
+    },
+    {
+        "price": 0.5497,
+        "change": 2.07,
+        "quote": "USD",
+        "baseName": "Cyber",
+        "base": "CYBER",
+        "marketCap": 35267486
+    },
+    {
+        "price": 0.10165,
+        "change": 6.9,
+        "quote": "USD",
+        "baseName": "CROSS",
+        "base": "CROSS",
+        "marketCap": 34277998
+    },
+    {
+        "price": 0.31413,
+        "change": -1.81,
+        "quote": "USD",
+        "baseName": "EthereumPoW",
+        "base": "ETHW",
+        "marketCap": 34095929
+    },
+    {
+        "price": 0.0066172,
+        "change": -1.53,
+        "quote": "USD",
+        "baseName": "ConstitutionDAO",
+        "base": "PEOPLE",
+        "marketCap": 33821261
+    },
+    {
+        "price": 464.85,
+        "change": 0.01,
+        "quote": "USD",
+        "baseName": "Gold tokenized ETF (xStock)",
+        "base": "GLDX",
+        "marketCap": 33070708
+    },
+    {
+        "price": 0.119,
+        "change": 3.47,
+        "quote": "USD",
+        "baseName": "io.net",
+        "base": "IO",
+        "marketCap": 32812376
+    },
+    {
+        "price": 0.012019,
+        "change": 1.38,
+        "quote": "USD",
+        "baseName": "COTI",
+        "base": "COTI",
+        "marketCap": 32568295
+    },
+    {
+        "price": 0.0323,
+        "change": -0.61,
+        "quote": "USD",
+        "baseName": "Civic",
+        "base": "CVC",
+        "marketCap": 32285015
+    },
+    {
+        "price": 4.85,
+        "change": -1.82,
+        "quote": "USD",
+        "baseName": "Bounce Token",
+        "base": "AUCTION",
+        "marketCap": 31983000
+    },
+    {
+        "price": 0.000183,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "Spell Token",
+        "base": "SPELL",
+        "marketCap": 31552095
+    },
+    {
+        "price": 0.014494,
+        "change": -2.75,
+        "quote": "USD",
+        "baseName": "Big Time",
+        "base": "BIGTIME",
+        "marketCap": 30488058
+    },
+    {
+        "price": 0.065,
+        "change": -3.07,
+        "quote": "USD",
+        "baseName": "Manta Network",
+        "base": "MANTA",
+        "marketCap": 30089741
+    },
+    {
+        "price": 0.030802,
+        "change": -4.86,
+        "quote": "USD",
+        "baseName": "AI Rig Complex",
+        "base": "ARC",
+        "marketCap": 30070801
+    },
+    {
+        "price": 0.00007062,
+        "change": -0.28,
+        "quote": "USD",
+        "baseName": "Neiro",
+        "base": "NEIRO",
+        "marketCap": 30069742
+    },
+    {
+        "price": 0.089639,
+        "change": 4.1,
+        "quote": "USD",
+        "baseName": "Solayer",
+        "base": "LAYER",
+        "marketCap": 29643007
+    },
+    {
+        "price": 29.387,
+        "change": -2.75,
+        "quote": "USD",
+        "baseName": "tokenbot",
+        "base": "CLANKER",
+        "marketCap": 29546589
+    },
+    {
+        "price": 0.02051,
+        "change": -4.27,
+        "quote": "USD",
+        "baseName": "Space and Time",
+        "base": "SXT",
+        "marketCap": 28950422
+    },
+    {
+        "price": 0.06411,
+        "change": -0.07,
+        "quote": "USD",
+        "baseName": "Ontology Gas",
+        "base": "ONG",
+        "marketCap": 28588918
+    },
+    {
+        "price": 0.0052504,
+        "change": 7.6,
+        "quote": "USD",
+        "baseName": "Animecoin",
+        "base": "ANIME",
+        "marketCap": 27527647
+    },
+    {
+        "price": 26.953,
+        "change": 0.45,
+        "quote": "USD",
+        "baseName": "Giggle Fund",
+        "base": "GIGGLE",
+        "marketCap": 27149426
+    },
+    {
+        "price": 0.00038884,
+        "change": -1.56,
+        "quote": "USD",
+        "baseName": "BOOK OF MEME",
+        "base": "BOME",
+        "marketCap": 27116929
+    },
+    {
+        "price": 0.2749,
+        "change": 2.53,
+        "quote": "USD",
+        "baseName": "Liquity",
+        "base": "LQTY",
+        "marketCap": 26643006
+    },
+    {
+        "price": 0.098719,
+        "change": 10.91,
+        "quote": "USD",
+        "baseName": "Mira",
+        "base": "MIRA",
+        "marketCap": 26533885
+    },
+    {
+        "price": 0.29427,
+        "change": -0.27,
+        "quote": "USD",
+        "baseName": "API3",
+        "base": "API3",
+        "marketCap": 25747152
+    },
+    {
+        "price": 0.111,
+        "change": -0.89,
+        "quote": "USD",
+        "baseName": "Arkham",
+        "base": "ARKM",
+        "marketCap": 25099317
+    },
+    {
+        "price": 0.9842,
+        "change": -5.59,
+        "quote": "USD",
+        "baseName": "Euler",
+        "base": "EUL",
+        "marketCap": 23998035
+    },
+    {
+        "price": 0.000023788,
+        "change": 2.71,
+        "quote": "USD",
+        "baseName": "WINkLink",
+        "base": "WIN",
+        "marketCap": 23928341
+    },
+    {
+        "price": 3.27,
+        "change": -1.5,
+        "quote": "USD",
+        "baseName": "Metis",
+        "base": "METIS",
+        "marketCap": 23776893
+    },
+    {
+        "price": 0.0788,
+        "change": 4.2,
+        "quote": "USD",
+        "baseName": "AriaAI",
+        "base": "ARIA",
+        "marketCap": 23576297
+    },
+    {
+        "price": 0.0612,
+        "change": -3.31,
+        "quote": "USD",
+        "baseName": "Resolv",
+        "base": "RESOLV",
+        "marketCap": 22483224
+    },
+    {
+        "price": 0.0966,
+        "change": 2.76,
+        "quote": "USD",
+        "baseName": "Hyperlane",
+        "base": "HYPER",
+        "marketCap": 22319807
+    },
+    {
+        "price": 0.08831,
+        "change": -3.74,
+        "quote": "USD",
+        "baseName": "Sapien",
+        "base": "SAPIEN",
+        "marketCap": 22301193
+    },
+    {
+        "price": 0.1839,
+        "change": -0.43,
+        "quote": "USD",
+        "baseName": "DIA",
+        "base": "DIA",
+        "marketCap": 21987713
+    },
+    {
+        "price": 0.0129,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "Usual",
+        "base": "USUAL",
+        "marketCap": 21603897
+    },
+    {
+        "price": 0.0606,
+        "change": 1.5,
+        "quote": "USD",
+        "baseName": "WalletConnect Token",
+        "base": "WCT",
+        "marketCap": 21184842
+    },
+    {
+        "price": 0.063958,
+        "change": -0.46,
+        "quote": "USD",
+        "baseName": "Treasure",
+        "base": "MAGIC",
+        "marketCap": 20903709
+    },
+    {
+        "price": 0.024732,
+        "change": 3.65,
+        "quote": "USD",
+        "baseName": "Phala Network",
+        "base": "PHA",
+        "marketCap": 20654062
+    },
+    {
+        "price": 0.024139,
+        "change": 19.36,
+        "quote": "USD",
+        "baseName": "aixbt",
+        "base": "AIXBT",
+        "marketCap": 20628012
+    },
+    {
+        "price": 0.0021456,
+        "change": -1.74,
+        "quote": "USD",
+        "baseName": "Gigachad",
+        "base": "GIGA",
+        "marketCap": 20349125
+    },
+    {
+        "price": 1.4252,
+        "change": -2.01,
+        "quote": "USD",
+        "baseName": "Tradoor",
+        "base": "TRADOOR",
+        "marketCap": 20172688
+    },
+    {
+        "price": 0.0095022,
+        "change": -2.25,
+        "quote": "USD",
+        "baseName": "Xai",
+        "base": "XAI",
+        "marketCap": 18988751
+    },
+    {
+        "price": 0.01895,
+        "change": -1.78,
+        "quote": "USD",
+        "baseName": "Goatseus Maximus",
+        "base": "GOAT",
+        "marketCap": 18960227
+    },
+    {
+        "price": 0.09169,
+        "change": -2.91,
+        "quote": "USD",
+        "baseName": "Definitive",
+        "base": "EDGE",
+        "marketCap": 18862059
+    },
+    {
+        "price": 0.0085156,
+        "change": -4.53,
+        "quote": "USD",
+        "baseName": "Spacecoin",
+        "base": "SPACE",
+        "marketCap": 18599962
+    },
+    {
+        "price": 0.0383,
+        "change": -1.28,
+        "quote": "USD",
+        "baseName": "Dymension",
+        "base": "DYM",
+        "marketCap": 18245780
+    },
+    {
+        "price": 0.007048,
+        "change": 1.64,
+        "quote": "USD",
+        "baseName": "Anoma",
+        "base": "XAN",
+        "marketCap": 17509876
+    },
+    {
+        "price": 0.016987,
+        "change": -1.45,
+        "quote": "USDT",
+        "baseName": "Vine Coin",
+        "base": "VINE",
+        "marketCap": 17121912
+    },
+    {
+        "price": 0.0849,
+        "change": 25.59,
+        "quote": "USD",
+        "baseName": "Newton Protocol",
+        "base": "NEWT",
+        "marketCap": 16950649
+    },
+    {
+        "price": 0.082519,
+        "change": -3.51,
+        "quote": "USD",
+        "baseName": "zkPass",
+        "base": "ZKP",
+        "marketCap": 16778911
+    },
+    {
+        "price": 0.05295,
+        "change": 0.07,
+        "quote": "USD",
+        "baseName": "Chainbase",
+        "base": "C",
+        "marketCap": 16756926
+    },
+    {
+        "price": 0.030271,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "Metaplex",
+        "base": "MPLX",
+        "marketCap": 16724677
+    },
+    {
+        "price": 0.016313,
+        "change": 2.46,
+        "quote": "USD",
+        "baseName": "Bonfida",
+        "base": "FIDA",
+        "marketCap": 15852423
+    },
+    {
+        "price": 0.17396,
+        "change": 10.04,
+        "quote": "USD",
+        "baseName": "YieldBasis",
+        "base": "YB",
+        "marketCap": 15785017
+    },
+    {
+        "price": 0.0386,
+        "change": -0.77,
+        "quote": "USD",
+        "baseName": "Catizen",
+        "base": "CATI",
+        "marketCap": 15306264
+    },
+    {
+        "price": 0.082,
+        "change": 5.53,
+        "quote": "USD",
+        "baseName": "Initia",
+        "base": "INIT",
+        "marketCap": 14910510
+    },
+    {
+        "price": 0.0000277,
+        "change": -0.39,
+        "quote": "USD",
+        "baseName": "DOGS",
+        "base": "DOGS",
+        "marketCap": 14404760
+    },
+    {
+        "price": 0.0013055,
+        "change": 3.58,
+        "quote": "USD",
+        "baseName": "FUNToken",
+        "base": "FUN",
+        "marketCap": 14100202
+    },
+    {
+        "price": 0.0606,
+        "change": 0.83,
+        "quote": "USD",
+        "baseName": "StakeStone",
+        "base": "STO",
+        "marketCap": 13910528
+    },
+    {
+        "price": 0.023997,
+        "change": -7.55,
+        "quote": "USD",
+        "baseName": "Polyhedra Network",
+        "base": "ZKJ",
+        "marketCap": 13820909
+    },
+    {
+        "price": 0.01347,
+        "change": -2.67,
+        "quote": "USD",
+        "baseName": "Mubarak",
+        "base": "MUBARAK",
+        "marketCap": 13573292
+    },
+    {
+        "price": 0.014385,
+        "change": 2.56,
+        "quote": "USD",
+        "baseName": "Act I : The AI Prophecy",
+        "base": "ACT",
+        "marketCap": 13512374
+    },
+    {
+        "price": 0.019948,
+        "change": -4.82,
+        "quote": "USD",
+        "baseName": "Origin Protocol",
+        "base": "OGN",
+        "marketCap": 13463659
+    },
+    {
+        "price": 0.0183,
+        "change": 5.17,
+        "quote": "USD",
+        "baseName": "Cookie DAO",
+        "base": "COOKIE",
+        "marketCap": 12649645
+    },
+    {
+        "price": 0.0522,
+        "change": -9.53,
+        "quote": "USD",
+        "baseName": "Bedrock",
+        "base": "BR",
+        "marketCap": 12104322
+    },
+    {
+        "price": 0.0144,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "Maverick Protocol",
+        "base": "MAV",
+        "marketCap": 12082476
+    },
+    {
+        "price": 0.07751,
+        "change": 10.74,
+        "quote": "USD",
+        "baseName": "Treehouse",
+        "base": "TREE",
+        "marketCap": 11921504
+    },
+    {
+        "price": 0.00398,
+        "change": 2.07,
+        "quote": "USD",
+        "baseName": "Nomina",
+        "base": "NOM",
+        "marketCap": 11566071
+    },
+    {
+        "price": 0.0012871,
+        "change": -2.04,
+        "quote": "USD",
+        "baseName": "elizaOS",
+        "base": "ELIZAOS",
+        "marketCap": 11484044
+    },
+    {
+        "price": 0.014514,
+        "change": -1.91,
+        "quote": "USD",
+        "baseName": "Hashflow",
+        "base": "HFT",
+        "marketCap": 10581774
+    },
+    {
+        "price": 0.000161,
+        "change": -1.82,
+        "quote": "USD",
+        "baseName": "Hamster Kombat",
+        "base": "HMSTR",
+        "marketCap": 10281995
+    },
+    {
+        "price": 0.031184,
+        "change": 5.96,
+        "quote": "USD",
+        "baseName": "MyShell",
+        "base": "SHELL",
+        "marketCap": 10086147
+    },
+    {
+        "price": 0.010059,
+        "change": -2.63,
+        "quote": "USD",
+        "baseName": "Just a chill guy",
+        "base": "CHILLGUY",
+        "marketCap": 10002510
+    },
+    {
+        "price": 0.0034129,
+        "change": 1.88,
+        "quote": "USD",
+        "baseName": "Towns",
+        "base": "TOWNS",
+        "marketCap": 9437645
+    },
+    {
+        "price": 0.015419,
+        "change": -0.12,
+        "quote": "USD",
+        "baseName": "Bubblemaps",
+        "base": "BMT",
+        "marketCap": 9259823
+    },
+    {
+        "price": 0.012192,
+        "change": -3.99,
+        "quote": "USD",
+        "baseName": "Portal",
+        "base": "PORTAL",
+        "marketCap": 9225232
+    },
+    {
+        "price": 0.27373,
+        "change": -0.35,
+        "quote": "USD",
+        "baseName": "Epic Chain",
+        "base": "EPIC",
+        "marketCap": 9217011
+    },
+    {
+        "price": 0.008731,
+        "change": -6.74,
+        "quote": "USD",
+        "baseName": "GRIFFAIN",
+        "base": "GRIFFAIN",
+        "marketCap": 8751447
+    },
+    {
+        "price": 0.026615,
+        "change": 0.03,
+        "quote": "USD",
+        "baseName": "Haedal Protocol",
+        "base": "HAEDAL",
+        "marketCap": 8672764
+    },
+    {
+        "price": 0.0070745,
+        "change": -2.4,
+        "quote": "USD",
+        "baseName": "Zerebro",
+        "base": "ZEREBRO",
+        "marketCap": 7161259
+    },
+    {
+        "price": 0.006849,
+        "change": -23.9,
+        "quote": "USD",
+        "baseName": "IDEX",
+        "base": "IDEX",
+        "marketCap": 6643297
+    },
+    {
+        "price": 0.005765,
+        "change": -5.24,
+        "quote": "USD",
+        "baseName": "Fwog (SOL)",
+        "base": "FWOG",
+        "marketCap": 5753894
+    },
+    {
+        "price": 0,
+        "change": 0,
+        "quote": "USD",
+        "baseName": "OVERTAKE",
+        "base": "TAKE",
+        "marketCap": 4643654
+    },
+    {
+        "price": 0.0011393,
+        "change": -3.57,
+        "quote": "USD",
+        "baseName": "Portal To Bitcoin",
+        "base": "PTB",
+        "marketCap": 4234286
+    },
+    {
+        "price": 0.0049559,
+        "change": -1.56,
+        "quote": "USD",
+        "baseName": "UXLINK",
+        "base": "UXLINK",
+        "marketCap": 3919387
+    },
+    {
+        "price": 0.0014719,
+        "change": -19.31,
+        "quote": "USD",
+        "baseName": "The Official 67 Coin",
+        "base": "67",
+        "marketCap": 1476283
+    },
+    {
+        "price": 0.001637,
+        "change": -1.56,
+        "quote": "USD",
+        "baseName": "Songbird",
+        "base": "SGB",
+        "marketCap": 0
+    },
+    {
+        "price": 0.0012094,
+        "change": -13.3,
+        "quote": "USD",
+        "baseName": "CantoBelieve",
+        "base": "BELIEVE",
+        "marketCap": 0
+    },
+    {
+        "price": 3.5e-7,
+        "change": 2.94,
+        "quote": "USD",
+        "base": "BTTC",
+        "marketCap": null
+    },
+    {
+        "price": 0.00219,
+        "change": -59.36,
+        "quote": "USD",
+        "base": "GORK",
+        "marketCap": null
+    },
+    {
+        "price": 5188.5,
+        "change": 0.61,
+        "quote": "USD",
+        "base": "XAUT",
+        "marketCap": null
+    },
+    {
+        "price": 0.0000115,
+        "change": 0.87,
+        "quote": "USD",
+        "base": "1000SATS",
+        "marketCap": null
+    },
+    {
+        "price": 0.0003063,
+        "change": -3.8,
+        "quote": "USD",
+        "base": "ITALIANROT",
+        "marketCap": null
+    }
+]

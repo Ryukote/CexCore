@@ -1,11 +1,10 @@
-﻿using System.Security.Cryptography;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace CexCore.Models.Request
 {
     public class IDRequest : EmptyPrivateRequest
     {
-        public IDRequest(HMAC hmac) : base(hmac)
+        public IDRequest(string apiSecret) : base(apiSecret)
         {
         }
 

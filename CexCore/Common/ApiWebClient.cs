@@ -223,35 +223,44 @@ namespace CexCore.Common
 
         private static void ThrowIfError(HttpResponseMessage response, JObject errorObj)
         {
-            string[] knownErrors =
-                {
-                    "Invalid API key",
-                    "API key is missing.",
-                    "Nonce must be incremented",
-                    "Permission denied",
-                };
-
             var error = errorObj["error"];
 
             if (error == null)
                 return;
 
-            switch (error.ToString())
+            var apiError = error.ToString();
+
+            switch (apiError)
             {
                 case "Invalid API key":
-                    throw new InvalidApiKeyException(response, error.ToString());
+                    throw new InvalidApiKeyException(
+                        response,
+                        "Authentication failed. The API key was rejected by CEX.IO.",
+                        apiError);
 
                 case "API key is missing.":
-                    throw new ApiKeyIsMissingException(response, error.ToString());
+                    throw new ApiKeyIsMissingException(
+                        response,
+                        "Authentication failed. API key is missing in request payload.",
+                        apiError);
 
                 case "Nonce must be incremented":
-                    throw new NonceException(response, error.ToString());
+                    throw new NonceException(
+                        response,
+                        "Request rejected due to nonce ordering. Retry with a higher nonce.",
+                        apiError);
 
                 case "Permission denied":
-                    throw new PermissionDeniedException(response, error.ToString());
+                    throw new PermissionDeniedException(
+                        response,
+                        "Authorization failed. Current key/account does not have required permissions.",
+                        apiError);
 
                 default:
-                    throw new ApiException(response, error.ToString());
+                    throw new ApiException(
+                        response,
+                        "CEX.IO returned an API error.",
+                        apiError);
             }
 
         }

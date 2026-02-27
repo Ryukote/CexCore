@@ -6,7 +6,21 @@ namespace CexCore.Helpers
     {
         internal static string ToStringNormalized(this SymbolPairs value)
         {
-            return value.ToString().Replace('_', '/');
+            var pair = value.ToString().Split('_');
+            if (pair.Length != 2)
+                return value.ToString().Replace('_', '/');
+
+            return pair[0].ToApiSymbol() + "/" + pair[1].ToApiSymbol();
+        }
+
+        internal static string ToApiSymbol(this Symbols value)
+        {
+            return SymbolAliasMapper.ToApiSymbol(value.ToString());
+        }
+
+        internal static string ToApiSymbol(this string symbol)
+        {
+            return SymbolAliasMapper.ToApiSymbol(symbol);
         }
 
         internal static string ToStringNormalized(this OrderType value)

@@ -50,7 +50,7 @@ namespace CexCore
 
         public Task<Ticker> GetTickerAsync(SymbolPairs pair, CancellationToken? cancellationToken = default(CancellationToken?))
         {
-            var command = Command.GetTicker.ToString().Normalize() + pair.ToString().Normalize();
+            var command = Command.GetTicker.ToStringNormalized() + pair.ToStringNormalized();
             var ticker = _client.GetDataAsync<Ticker>(command);
 
             return ticker;
@@ -60,8 +60,10 @@ namespace CexCore
         {
             char[] delimiter = { '_' };
             string[] splitPairs = pair.ToString().Split(delimiter);
+            string symbol1 = splitPairs[0].ToApiSymbol();
+            string symbol2 = splitPairs[1].ToApiSymbol();
             //https://cex.io/api/last_price/{symbol1}/{symbol2}
-            var url = "last_price/" + splitPairs[0] + "/" + splitPairs[1];
+            var url = "last_price/" + symbol1 + "/" + symbol2;
             //Command.GetLastPrice.ToString() + pair.ToString()
             var command = url;
             var json = await _client.GetDataAsync(command);
@@ -77,7 +79,7 @@ namespace CexCore
                 { "amnt",  amount.ToString() }
             };
 
-            var command = Command.Convert.ToString().Normalize() + pair.ToString().Normalize();
+            var command = Command.Convert.ToStringNormalized() + pair.ToStringNormalized();
             var json = await _client.PostDataAsync(command, parameters);
 
             var result = JObject.Parse(json);
@@ -89,7 +91,9 @@ namespace CexCore
         public async Task<OrderBook> GetOrderBookAsync(SymbolPairs pair)
         {
             string[] splittedPairs = pair.ToString().Split('_');
-            var command = Command.Order_Book.ToString().ToLowerInvariant() + "/" + splittedPairs[0] + "/" + splittedPairs[1];
+            var symbol1 = splittedPairs[0].ToApiSymbol();
+            var symbol2 = splittedPairs[1].ToApiSymbol();
+            var command = Command.Order_Book.ToStringNormalized() + symbol1 + "/" + symbol2;
             var orderbook = await _client.GetDataAsync<OrderBook>(command);
 
             return orderbook;

@@ -1,11 +1,10 @@
 ﻿using Newtonsoft.Json;
-using System.Security.Cryptography;
 
 namespace CexCore.Models.Request
 {
     public class OpenPositionOrderRequest : EmptyPrivateRequest
     {
-        public OpenPositionOrderRequest(HMAC hmac) : base(hmac)
+        public OpenPositionOrderRequest(string apiSecret) : base(apiSecret)
         {
         }
 

@@ -1,18 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Ryukote</Authors>
     <Description>CexCore is .NET Core wrapper over CEX.IO API for trading.</Description>
     <RepositoryUrl>https://github.com/Ryukote/CexCore</RepositoryUrl>
-    <Version>1.6.2</Version>
-    <AssemblyVersion>1.6.2.0</AssemblyVersion>
-    <FileVersion>1.6.2.0</FileVersion>
-    <PackageReleaseNotes>Fixed order book.</PackageReleaseNotes>
+    <Version>1.7.2</Version>
+    <AssemblyVersion>1.7.2.0</AssemblyVersion>
+    <FileVersion>1.7.2.0</FileVersion>
+    <PackageReleaseNotes>Expanded symbol and conversion coverage, added alias mapping for non-standard tickers, improved balance model coverage for all supported symbols, and refined API exception messages.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
   <ItemGroup>

@@ -135,3 +135,6 @@ UpgradeLog*.htm
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config
+
+# Local working notes
+todo.md
